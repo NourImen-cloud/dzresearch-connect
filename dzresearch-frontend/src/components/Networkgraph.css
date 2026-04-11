@@ -1,0 +1,212 @@
+/* ── Container ───────────────────────────────────────────── */
+.ng {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.ng__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.3rem;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ng__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+.ng__subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ng__legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ng__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-body);
+}
+
+.ng__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Canvas ──────────────────────────────────────────────── */
+.ng__canvas-wrap {
+  position: relative;
+  background: #f8fafc;
+  background-image:
+    radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.ng__svg {
+  display: block;
+  width: 100%;
+}
+
+/* Node hover effect via CSS (D3 handles the rest) */
+.ng__svg .ng-node circle {
+  transition: filter 0.15s ease;
+}
+
+.ng__svg .ng-node:hover circle {
+  filter: brightness(1.15);
+}
+
+/* ── Empty state ─────────────────────────────────────────── */
+.ng__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+.ng__tooltip {
+  position: absolute;
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 50;
+  transform: translate(-50%, -100%);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Small arrow */
+.ng__tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--navy);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.ng__tooltip-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.ng__tooltip-inst {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.ng__tooltip-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.ng__tooltip-loc {
+  padding: 1px 7px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.68rem;
+}
+
+.ng__tooltip-loc--local  { background: rgba(29,158,117,0.2); color: #1D9E75; }
+.ng__tooltip-loc--abroad { background: rgba(127,119,221,0.2); color: #7F77DD; }
+
+.ng__tooltip-hint {
+  font-size: 0.68rem;
+  color: var(--gold);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* ── Neighbor list ───────────────────────────────────────── */
+.ng__neighbors {
+  padding: 1rem 1.3rem 1.2rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ng__neighbors-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.ng__neighbors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ng__neighbor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  text-align: left;
+  width: 100%;
+  transition: background var(--transition);
+  border: 1px solid transparent;
+}
+
+.ng__neighbor:hover,
+.ng__neighbor--hovered {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.ng__neighbor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ng__neighbor-name {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.ng__neighbor-weight {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
