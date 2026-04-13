@@ -179,8 +179,9 @@ function ResearcherCard({ data }) {
 
 /* ── Paper card ──────────────────────────────────────────── */
 function PaperCard({ data }) {
+   const navigate = useNavigate()
   return (
-    <article className="pc">
+    <article className="pc" onClick={() => navigate(`/paper/${data.id}`)}>
       <div className="pc__img-wrap">
         <PaperBigIcon />
         <span className="rc__score">{data.score}%</span>
