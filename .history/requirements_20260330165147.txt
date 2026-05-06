@@ -1,7 +1,0 @@
-sentence-transformers
-faiss-cpu
-scikit-learn
-fastapi
-uvicorn
-pandas
-numpy

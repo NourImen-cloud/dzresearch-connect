@@ -5,3 +5,7 @@ fastapi
 uvicorn
 pandas
 numpy
+sqlalchemy
+python-jose
+passlib
+email-validator
