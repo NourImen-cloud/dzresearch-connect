@@ -1,17 +1,10 @@
 import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './Home.css'
-import pic
- from '../images/AlgeriaNetwork.png';
+import pic from '../images/AlgeriaNetwork.png';
 import SearchBar from '../components/Searchbar';
 import { Link } from 'react-router-dom';
-
-/* ─── Stats data ─────────────────────────────────────────── */
-const STATS = [
-  { icon: <PeopleIcon />,  value: '2,500+',  label: 'Researchers' },
-  { icon: <PaperIcon />,   value: '15,000+', label: 'Papers'      },
-  { icon: <TopicIcon />,   value: '50+',     label: 'Topics'      },
-  { icon: <GlobeIcon />,   value: '25+',     label: 'Countries'   },
-]
+import { getStats } from '../services/api'
 
 /* ─── How It Works steps ──────────────────────────────────── */
 const STEPS = [
@@ -59,16 +52,37 @@ const STEPS = [
 
 /* ═══════════════════════════════════════════════════════════ */
 export default function Home() {
-  const navigate  = useNavigate()
+  const navigate = useNavigate()
+  const [stats, setStats] = useState({
+    total_researchers: '477+',
+    total_papers:      '21k+',
+    topics:            '50+',
+    countries:         '25+',
+  })
 
-    const handleSearch = ({ query, country, type, topic }) => {
-        if (!query.trim()) return
-        const params = new URLSearchParams({ q: query })
-        if (country !== 'All Countries') params.set('country', country)
-        if (type    !== 'All')           params.set('type',    type)
-        if (topic   !== 'All Topics')    params.set('topic',   topic)
-        navigate(`/search?${params.toString()}`)
-    }
+  useEffect(() => {
+    getStats()
+      .then(s => {
+        if (s) setStats(s)
+      })
+      .catch(() => {/* keep defaults */})
+  }, [])
+
+  const STATS = [
+    { icon: <PeopleIcon />, value: stats.total_researchers?.toLocaleString?.() ?? stats.total_researchers, label: 'Researchers' },
+    { icon: <PaperIcon />,  value: stats.total_papers?.toLocaleString?.()     ?? stats.total_papers,      label: 'Papers'      },
+    { icon: <TopicIcon />,  value: stats.topics  ?? '50+',                                                label: 'Topics'      },
+    { icon: <GlobeIcon />,  value: stats.countries ?? '25+',                                              label: 'Countries'   },
+  ]
+
+  const handleSearch = ({ query, country, type, topic }) => {
+    if (!query.trim()) return
+    const params = new URLSearchParams({ q: query })
+    if (country !== 'All Countries') params.set('country', country)
+    if (type    !== 'All')           params.set('type',    type)
+    if (topic   !== 'All Topics')    params.set('topic',   topic)
+    navigate(`/search?${params.toString()}`)
+  }
 
   return (
     <div className="home">

@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import SearchBar from '../components/Searchbar'
-import { MOCK_RESULTS, SORT_OPTIONS, applyFilters } from '../data/mockData'
+import { searchAll } from '../services/api'
 import './Search.css'
+
+const SORT_OPTIONS = ['Relevance', 'Most Recent', 'Most Citations']
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
-
-  // Read initial query from URL (?q=...)
   const initialQuery = searchParams.get('q') || ''
 
   const [filters,  setFilters]  = useState({
@@ -19,17 +19,42 @@ export default function Search() {
   const [sortBy,   setSortBy]   = useState('Relevance')
   const [results,  setResults]  = useState([])
   const [loading,  setLoading]  = useState(false)
+  const [error,    setError]    = useState(null)
   const [visibleN, setVisibleN] = useState(6)
-  useEffect(() => {
+
+  // Fetch from real API whenever filters change
+  const fetchResults = useCallback(async () => {
     setLoading(true)
-    const timer = setTimeout(() => {
-      const res = applyFilters(MOCK_RESULTS, { ...filters, sortBy })
-      setResults(res)
+    setError(null)
+    try {
+      let data = await searchAll(filters.query, {
+        location: filters.country,
+        type:     filters.type,
+        topic:    filters.topic,
+      }, 50)
+
+      // Client-side sort
+      if (sortBy === 'Most Recent')
+        data = [...data].sort((a, b) => (b.year || 0) - (a.year || 0))
+      if (sortBy === 'Most Citations')
+        data = [...data].sort((a, b) =>
+          (b.citations || b.papers || 0) - (a.citations || a.papers || 0)
+        )
+
+      setResults(data)
       setVisibleN(6)
+    } catch (err) {
+      setError('Could not reach the server. Is the backend running?')
+      setResults([])
+    } finally {
       setLoading(false)
-    }, 300)
-    return () => clearTimeout(timer)
+    }
   }, [filters, sortBy])
+
+  useEffect(() => {
+    const timer = setTimeout(fetchResults, 350)
+    return () => clearTimeout(timer)
+  }, [fetchResults])
 
   // Keep URL in sync with query
   const handleSearch = ({ query, country, type, topic }) => {
@@ -106,6 +131,17 @@ export default function Search() {
         {loading && (
           <div className="sp-grid">
             {[1,2,3,4,5,6].map(i => <SkeletonCard key={i} />)}
+          </div>
+        )}
+
+        {/* Error banner */}
+        {!loading && error && (
+          <div className="sp-empty">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#f87171" strokeWidth="1.3">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <h3>Backend not reachable</h3>
+            <p>{error}</p>
           </div>
         )}
 
