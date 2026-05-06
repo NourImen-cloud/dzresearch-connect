@@ -1,0 +1,478 @@
+id,name,location,institution,country,h_index,citations,paper_count,topics,num_papers
+https://openalex.org/A5027644473,Adel Ouannas,Algeria,Université Larbi Tébessi,DZ,39,5559,293,Mathematics | Computer science | Artificial intelligence | Applied mathematics | Physics,74
+https://openalex.org/A5005859792,A. Mellit,Algeria,University of Jijel,DZ,62,14837,259,Photovoltaic system | Computer science | Artificial intelligence | Engineering | Electrical engineering,72
+https://openalex.org/A5001907851,Salim Heddam,Algeria,University of Skikda,DZ,46,6495,242,Environmental science | Computer science | Artificial intelligence | Statistics | Mathematics,71
+https://openalex.org/A5026903935,Mohamed Amine Ferrag,Algeria,University of Guelma,DZ,46,10677,222,Computer science | Artificial intelligence | Computer security | Engineering | Operating system,62
+https://openalex.org/A5000065373,Menad Nait Amar,Algeria,Sonatrach (Algeria),DZ,36,2784,104,Machine learning | Computer science | Artificial intelligence | Chemistry | Mathematics,45
+https://openalex.org/A5034494517,Chawki Djeddi,Algeria,Université Larbi Tébessi,DZ,23,1675,102,Computer science | Artificial intelligence | Pattern recognition (psychology) | Image (mathematics) | Philosophy,43
+https://openalex.org/A5088665937,Abdelmalek Amine,Algeria,Université de Saida Dr.Moulay Tahar,DZ,16,827,130,Computer science | Artificial intelligence | Machine learning | Information retrieval | Data mining,43
+https://openalex.org/A5011155311,Abdelghani Dahou,Algeria,Ahmed Draia University,DZ,34,3454,82,Computer science | Artificial intelligence | Pattern recognition (psychology) | Machine learning | Philosophy,41
+https://openalex.org/A5034975888,Djamila Rekioua,Algeria,University of Béjaïa,DZ,42,5675,226,Computer science | Power (physics) | Engineering | Electrical engineering | Physics,40
+https://openalex.org/A5006433433,Halim Sayoud,Algeria,University of Sciences and Technology Houari Boumediene,DZ,11,472,89,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,40
+https://openalex.org/A5057570891,Reda Mohamed Hamou,Algeria,Université de Saida Dr.Moulay Tahar,DZ,14,619,108,Computer science | Artificial intelligence | Machine learning | World Wide Web | Data mining,40
+https://openalex.org/A5023668331,Abdesselem Boulkroune,Algeria,University of Jijel,DZ,34,3619,117,Control theory (sociology) | Mathematics | Computer science | Control (management) | Artificial intelligence,38
+https://openalex.org/A5065021759,Youcef Chibani,Algeria,University of Sciences and Technology Houari Boumediene,DZ,23,2289,166,Computer science | Support vector machine | Artificial intelligence | Pattern recognition (psychology) | Mathematics,37
+https://openalex.org/A5033945050,Toufik Rekioua,Algeria,University of Béjaïa,DZ,37,4526,187,Computer science | Physics | Electrical engineering | Engineering | Quantum mechanics,35
+https://openalex.org/A5067619763,Faiçal Azouaou,Algeria,École Nationale Supérieure d'Informatique,DZ,14,763,90,Computer science | Natural language processing | Artificial intelligence | Information retrieval | Philosophy,33
+https://openalex.org/A5000194284,Abdelouahab Moussaouı,Algeria,University Ferhat Abbas of Setif,DZ,19,2153,123,Computer science | Artificial intelligence | Pattern recognition (psychology) | Machine learning | Mathematics,32
+https://openalex.org/A5091718065,Nabiha Azizi,Algeria,Badji Mokhtar University,DZ,16,798,89,Computer science | Artificial intelligence | Classifier (UML) | Machine learning | Pattern recognition (psychology),31
+https://openalex.org/A5085975641,Makhlouf Derdour,Algeria,Université Larbi Tébessi,DZ,15,1030,139,Computer science | Artificial intelligence | Computer security | Machine learning | Operating system,30
+https://openalex.org/A5107337666,Abdelkamel Tari,Algeria,University of Béjaïa,DZ,20,1696,157,Mathematics | Computer science | Computer network | Artificial intelligence | Operating system,27
+https://openalex.org/A5080622873,Mouffak Benchohra,Algeria,Université Djilali de Sidi Bel Abbès,DZ,42,10224,624,Mathematics | Pure mathematics | Mathematical analysis | Applied mathematics | Computer science,27
+https://openalex.org/A5091140244,Chaker Abdelaziz Kerrache,Algeria,University of Laghouat,DZ,27,2434,159,Computer science | Computer network | Computer security | Telecommunications | World Wide Web,27
+https://openalex.org/A5013553678,Aissa Chouder,Algeria,Université de M'Sila,DZ,35,5620,132,Computer science | Artificial intelligence | Electrical engineering | Engineering | Physics,26
+https://openalex.org/A5063976278,Mohamed Batouche,Algeria,Université Constantine 2,DZ,24,2147,201,Computer science | Artificial intelligence | Algorithm | Image (mathematics) | Mathematics,26
+https://openalex.org/A5026844364,Zibouda Aliouat,Algeria,University Ferhat Abbas of Setif,DZ,25,1935,144,Computer science | Computer network | Wireless sensor network | Distributed computing | Engineering,26
+https://openalex.org/A5079674514,Fouzi Harrag,Algeria,University Ferhat Abbas of Setif,DZ,11,522,56,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,26
+https://openalex.org/A5019747586,Kamel Boukhalfa,Algeria,University of Sciences and Technology Houari Boumediene,DZ,14,1698,104,Computer science | Data warehouse | Data mining | Mathematics | Operating system,25
+https://openalex.org/A5024155508,Abdelkader Dairi,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,23,2263,60,Computer science | Artificial intelligence | Deep learning | Machine learning | Support vector machine,25
+https://openalex.org/A5023316240,Mawloud Guermoui,Algeria,Renewable Energy Development Center,DZ,27,2217,96,Computer science | Artificial intelligence | Environmental science | Engineering | Physics,25
+https://openalex.org/A5076176608,Salih Djilali,Algeria,University of Abou Bekr Belkaïd,DZ,30,2474,113,Mathematics | Biology | Applied mathematics | Computer science | Physics,25
+https://openalex.org/A5046160644,Nadir Farah,Algeria,Badji Mokhtar University,DZ,15,801,76,Computer science | Speech recognition | Pattern recognition (psychology) | Artificial intelligence | Mathematics,25
+https://openalex.org/A5058558466,Yacine Challal,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,32,5136,234,Computer science | Computer network | Computer security | Distributed computing | Operating system,24
+https://openalex.org/A5036200309,Ahmed Guessoum,Algeria,University of Sciences and Technology Houari Boumediene,DZ,15,735,54,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,24
+https://openalex.org/A5074365263,Ghalem Belalem,Algeria,Université Oran 1 Ahmed Ben Bella,DZ,17,1220,182,Computer science | Distributed computing | Artificial intelligence | Operating system | Mathematics,24
+https://openalex.org/A5068969975,Hacene Belhadef,Algeria,Université Constantine 2,DZ,7,215,60,Computer science | Artificial intelligence | Natural language processing | Information retrieval | Philosophy,24
+https://openalex.org/A5053417618,Hassiba Nemmour,Algeria,University of Sciences and Technology Houari Boumediene,DZ,16,1100,86,Computer science | Support vector machine | Pattern recognition (psychology) | Artificial intelligence | Mathematics,23
+https://openalex.org/A5066157144,Djamel Djenouri,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,34,3898,167,Computer science | Computer network | Wireless sensor network | Artificial intelligence | Telecommunications,23
+https://openalex.org/A5025214147,Siham Ouamour,Algeria,University of Sciences and Technology Houari Boumediene,DZ,9,305,55,Computer science | Speech recognition | Artificial intelligence | Linguistics | Philosophy,23
+https://openalex.org/A5026225688,Sidi Mohamed Benslimane,Algeria,École Nationale Supérieure d'Informatique,DZ,14,666,164,Computer science | World Wide Web | Artificial intelligence | Philosophy | Programming language,23
+https://openalex.org/A5039079296,Adel Belouchrani,Algeria,Polytechnic School of Algiers,DZ,30,6510,241,Computer science | Algorithm | Artificial intelligence | Mathematics | Telecommunications,22
+https://openalex.org/A5069059137,Mimoun Malki,Algeria,Université Djilali de Sidi Bel Abbès,DZ,14,750,155,Computer science | Semantic Web | Information retrieval | World Wide Web | Philosophy,22
+https://openalex.org/A5028922084,Hassina Aliane,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,8,319,44,Computer science | Artificial intelligence | Natural language processing | Philosophy | Linguistics,22
+https://openalex.org/A5044719111,Nadjia Benblidia,Algeria,University of Blida,DZ,9,294,78,Computer science | Artificial intelligence | Information retrieval | Data mining | Mathematics,22
+https://openalex.org/A5055340064,Zizette Boufaïda,Algeria,University of Constantine 3,,8,279,93,Computer science | Ontology | Artificial intelligence | Philosophy | Epistemology,22
+https://openalex.org/A5005043456,Omar Nouali,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,10,495,106,Computer science | Information retrieval | Computer security | World Wide Web | Operating system,21
+https://openalex.org/A5069734774,M. Benghanem,Algeria,University of Sciences and Technology Houari Boumediene,DZ,37,5079,161,Computer science | Artificial intelligence | Engineering | Physics | Electrical engineering,20
+https://openalex.org/A5087761119,Hamza Kheddar,Algeria,University Yahia Fares of Medea,DZ,17,1317,85,Computer science | Artificial intelligence | Deep learning | Machine learning | Computer security,20
+https://openalex.org/A5089702125,Leila Zemmouchi-Ghomari,Algeria,École Nationale Supérieure de Technologie,DZ,8,317,60,Computer science | World Wide Web | Knowledge management | Engineering | Philosophy,20
+https://openalex.org/A5037106045,Fatiha Barigou,Algeria,Université Oran 1 Ahmed Ben Bella,DZ,8,278,46,Computer science | Information retrieval | Natural language processing | Artificial intelligence | Philosophy,20
+https://openalex.org/A5026059680,Baghdad Atmani,Algeria,Université Oran 1 Ahmed Ben Bella,DZ,11,543,85,Computer science | Artificial intelligence | Machine learning | Data mining | Mathematics,20
+https://openalex.org/A5055982084,Salim Chıkhı,Algeria,University of Constantine 3,,19,1405,141,Computer science | Computer network | Artificial intelligence | Algorithm | Mathematics,20
+https://openalex.org/A5067052664,Oualid Hamdaoui,Algeria,Badji Mokhtar University,DZ,60,12772,319,Chemistry | Materials science | Computer science | Physics | Organic chemistry,20
+https://openalex.org/A5061035510,Fateh Krim,Algeria,University Ferhat Abbas of Setif,DZ,28,3221,117,Computer science | Artificial intelligence | Engineering | Control (management) | Electrical engineering,19
+https://openalex.org/A5009204409,Mohamed Athmane Yallese,Algeria,University of Guelma,DZ,34,4262,142,Materials science | Metallurgy | Composite material | Mechanical engineering | Engineering,19
+https://openalex.org/A5064615228,Hafed Zarzour,Algeria,Mohamed-Cherif Messaadia University,DZ,16,1387,54,Computer science | Deep learning | Artificial intelligence | World Wide Web | Machine learning,19
+https://openalex.org/A5040353704,Tarek Berghout,Algeria,University of Batna 1,DZ,19,1189,102,Computer science | Artificial intelligence | Artificial neural network | Machine learning | Engineering,19
+https://openalex.org/A5029045930,Labiba Souici‐Meslati,Algeria,Badji Mokhtar University,DZ,13,623,49,Computer science | Artificial intelligence | Pattern recognition (psychology) | Philosophy | Linguistics,19
+https://openalex.org/A5078815797,Mokhtar Sellami,Algeria,Badji Mokhtar-Annaba University,DZ,16,933,132,Medicine | Computer science | Artificial intelligence | Internal medicine | Philosophy,19
+https://openalex.org/A5032944332,Imane Guellil,Algeria,École Nationale Supérieure d'Informatique,DZ,9,480,36,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,18
+https://openalex.org/A5050801868,Jackie Chi Kit Cheung,Algeria,Centre Universitaire de Mila,DZ,25,2215,145,Computer science | Artificial intelligence | Natural language processing | Machine learning | Philosophy,18
+https://openalex.org/A5046210131,Abdelkader Benyettou,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,18,1369,127,Computer science | Artificial neural network | Artificial intelligence | Pattern recognition (psychology) | Machine learning,18
+https://openalex.org/A5066063194,Nadjem Bailek,Algeria,Centre Universitaire de Tamanrasset,DZ,25,1708,73,Environmental science | Computer science | Artificial intelligence | Engineering | Mathematics,18
+https://openalex.org/A5071367157,Abdelkrim Bouramoul,Algeria,Université Constantine 2,DZ,9,209,51,Computer science | Information retrieval | Artificial intelligence | Data mining | Philosophy,18
+https://openalex.org/A5024049568,Fatima Boumahdi,Algeria,University of Blida,DZ,7,158,44,Computer science | Artificial intelligence | Machine learning | World Wide Web | Business,18
+https://openalex.org/A5086576809,Mohamed Amine Chéragui,Algeria,Ahmed Draia University,DZ,6,124,29,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,18
+https://openalex.org/A5085833879,Mohamed Lichouri,Algeria,University of Sciences and Technology Houari Boumediene,DZ,8,195,41,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,18
+https://openalex.org/A5015557242,Chérif Larbès,Algeria,Polytechnic School of Algiers,DZ,23,3056,96,Computer science | Artificial intelligence | Physics | Engineering | Electrical engineering,17
+https://openalex.org/A5057372051,Abdelmalek Kouadri,Algeria,University of Boumerdes,DZ,21,1468,91,Fault detection and isolation | Mathematics | Artificial intelligence | Computer science | Engineering,17
+https://openalex.org/A5080144684,Omar Sami Oubbati,Algeria,University of Laghouat,DZ,26,3160,37,Computer science | Computer network | Wireless | Engineering | Telecommunications,17
+https://openalex.org/A5055308914,Abdelmalik Ouamane,Algeria,University of Biskra,DZ,19,1198,91,Computer science | Pattern recognition (psychology) | Artificial intelligence | Mathematics | Sociology,17
+https://openalex.org/A5074447861,Hadj Ahmed Bouarara,Algeria,École Nationale Supérieure d'Informatique,DZ,11,406,64,Computer science | Artificial intelligence | Machine learning | World Wide Web | Data mining,17
+https://openalex.org/A5020099100,Halima Bahi,Algeria,Badji Mokhtar University,DZ,11,303,51,Computer science | Speech recognition | Artificial intelligence | Philosophy | Linguistics,17
+https://openalex.org/A5106222808,Zaïa Alimazighi,Algeria,University of Sciences and Technology Houari Boumediene,DZ,10,304,81,Computer science | Process (computing) | Database | Mathematics | Operating system,17
+https://openalex.org/A5108141689,Mohamed Tadjine,Algeria,Polytechnic School of Algiers,DZ,27,3419,251,Control theory (sociology) | Computer science | Artificial intelligence | Control (management) | Engineering,16
+https://openalex.org/A5059062747,Mohamed Faouzi Harkat,Algeria,Badji Mokhtar University,DZ,26,2186,117,Fault detection and isolation | Computer science | Artificial intelligence | Actuator | Mathematics,16
+https://openalex.org/A5002854059,Houria Triki,Algeria,Badji Mokhtar University,DZ,54,9184,312,Physics | Mathematics | Soliton | Nonlinear system | Quantum mechanics,16
+https://openalex.org/A5069135652,Noureddine Doumi,Algeria,Université de Saida Dr.Moulay Tahar,DZ,5,180,24,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,16
+https://openalex.org/A5038562202,Nadjib Badache,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,25,2714,226,Computer science | Wireless sensor network | Computer network | Distributed computing | Telecommunications,16
+https://openalex.org/A5025167796,Adel Oubelaid,Algeria,University of Béjaïa,DZ,23,1348,82,Computer science | Engineering | Electrical engineering | Physics | Quantum mechanics,16
+https://openalex.org/A5000111276,Saı̈d Abbas,Algeria,Université de Saida Dr.Moulay Tahar,DZ,24,2676,199,Mathematics | Mathematical analysis | Applied mathematics | Pure mathematics | Computer science,16
+https://openalex.org/A5082266809,Abdelkrim Meziane,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,9,272,135,Medicine | Computer science | Artificial intelligence | Surgery | Operating system,16
+https://openalex.org/A5086986583,Mohamed Amine Boudia,Algeria,Université de Saida Dr.Moulay Tahar,DZ,6,107,32,Computer science | Natural language processing | Data mining | Artificial intelligence | Machine learning,16
+https://openalex.org/A5026535512,Mohamed Ridda Laouar,Algeria,Université Larbi Tébessi,DZ,12,420,83,Computer science | Artificial intelligence | Engineering | Mathematics | Operating system,16
+https://openalex.org/A5029774217,Leila Falek,Algeria,University of Science and Technology,YE,5,78,35,Computer science | Speech recognition | Artificial intelligence | Linguistics | Philosophy,16
+https://openalex.org/A5046463612,Abdeldjalil Ouahabi,Algeria,Inserm,FR,31,3710,191,Medicine | Mathematics | Computer science | Physics | Artificial intelligence,15
+https://openalex.org/A5010892464,Mohamed Chemachema,Algeria,University of Constantine 3,,21,1874,53,Control theory (sociology) | Computer science | Artificial intelligence | Control (management) | Physics,15
+https://openalex.org/A5045179061,Amar Debbouche,Algeria,University of Guelma,DZ,28,2355,101,Mathematics | Computer science | Applied mathematics | Mathematical analysis | Physics,15
+https://openalex.org/A5106031164,Hamid Séridi,Algeria,University of Guelma,DZ,16,1154,127,Computer science | Pattern recognition (psychology) | Artificial intelligence | Machine learning | Mathematics,15
+https://openalex.org/A5056077142,Kamel Srairi,Algeria,University of Biskra,DZ,24,2100,144,Computer science | Physics | Engineering | Artificial intelligence | Quantum mechanics,15
+https://openalex.org/A5111869297,Achour Betka,Algeria,University of Biskra,DZ,18,1337,66,Control theory (sociology) | Computer science | Engineering | Electrical engineering | Artificial intelligence,15
+https://openalex.org/A5048053471,Fateh Mebarek‐Oudina,Algeria,University of Skikda,DZ,61,7880,167,Materials science | Mechanics | Heat transfer | Thermodynamics | Physics,15
+https://openalex.org/A5014148326,Amrane Houacine,Algeria,University of Sciences and Technology Houari Boumediene,DZ,16,1145,76,Computer science | Artificial intelligence | Computer vision | Pattern recognition (psychology) | Mathematics,15
+https://openalex.org/A5066272920,Amina–Aicha Khennaoui,Algeria,Larbi Ben M'hidi University of Oum El Bouaghi,DZ,22,1371,70,Mathematics | Chaotic | Computer science | Applied mathematics | Artificial intelligence,15
+https://openalex.org/A5055080645,Karima Meftouh,Algeria,Badji Mokhtar University,DZ,12,479,25,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,15
+https://openalex.org/A5015883703,Soraya Sedkaoui,Algeria,Université Djilali Bounaama Khemis Miliana,DZ,8,423,42,Computer science | Analytics | Data science | Data mining | Business,15
+https://openalex.org/A5082460351,Abdelaziz Rabehi,Algeria,Ziane Achour University of Djelfa,DZ,21,1521,105,Materials science | Computer science | Optoelectronics | Physics | Engineering,15
+https://openalex.org/A5018360551,Akram Bennour,Algeria,Université Larbi Tébessi,DZ,9,275,54,Computer science | Artificial intelligence | Machine learning | Deep learning | Pattern recognition (psychology),15
+https://openalex.org/A5087306694,Amine Rahmani,Algeria,Université de Saida Dr.Moulay Tahar,DZ,7,221,29,Computer science | Information retrieval | Artificial intelligence | Computer security | Data mining,15
+https://openalex.org/A5023933905,Mourad Amad,Algeria,University of Bouira,DZ,9,291,81,Computer science | Scalability | Computer network | Distributed computing | World Wide Web,15
+https://openalex.org/A5046969653,Hadda Cherroun,Algeria,University of Laghouat,DZ,10,269,62,Computer science | Artificial intelligence | Linguistics | Mathematics | Philosophy,15
+https://openalex.org/A5010532815,Mohammed Achite,Algeria,Hassiba Benbouali University of Chlef,DZ,24,1321,87,Environmental science | Geology | Mathematics | Computer science | Geography,14
+https://openalex.org/A5090157446,Mawloud Omar,Algeria,University of Béjaïa,DZ,17,993,155,Computer science | Computer network | Computer security | Artificial intelligence | Engineering,14
+https://openalex.org/A5012686882,Fatima Zohra Laallam,Algeria,University of Ouargla,DZ,11,364,40,Computer science | Artificial intelligence | Machine learning | World Wide Web | Mathematics,14
+https://openalex.org/A5048857332,Salim Bitam,Algeria,University of Biskra,DZ,21,1982,87,Computer science | Computer network | Telecommunications | Distributed computing | Wireless,14
+https://openalex.org/A5002121147,Kheireddine Abainia,Algeria,University of Sciences and Technology Houari Boumediene,DZ,5,154,19,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,14
+https://openalex.org/A5079522690,Ahlem Drif,Algeria,University Ferhat Abbas of Setif,DZ,8,188,34,Computer science | Artificial intelligence | Machine learning | World Wide Web | Data mining,14
+https://openalex.org/A5006781798,Mounir Hemam,Algeria,Abbès Laghrour University of Khenchela,DZ,9,203,46,Computer science | Ontology | Artificial intelligence | Epistemology | Philosophy,14
+https://openalex.org/A5079157864,Imene Bensalem,Algeria,University Frères Mentouri Constantine 1,DZ,7,156,21,Computer science | Linguistics | Natural language processing | Artificial intelligence | Philosophy,14
+https://openalex.org/A5003823682,Djamila Hamdadou,Algeria,Université Oran 1 Ahmed Ben Bella,DZ,6,173,53,Computer science | Decision support system | Artificial intelligence | Operations research | Engineering,14
+https://openalex.org/A5058988344,Leila Benarous,Algeria,University of Laghouat,DZ,9,248,31,Computer science | Computer security | Artificial intelligence | Internet privacy | Mathematics,14
+https://openalex.org/A5072138705,Slimane Merouani,Algeria,Badji Mokhtar University,DZ,44,6390,263,Chemistry | Materials science | Computer science | Physics | Organic chemistry,14
+https://openalex.org/A5055829058,Abdelghani Harrag,Algeria,University Ferhat Abbas of Setif,DZ,20,1861,99,Computer science | Artificial intelligence | Control (management) | Engineering | Electrical engineering,13
+https://openalex.org/A5090221516,Amar Hadj Arab,Algeria,Renewable Energy Development Center,DZ,27,2604,118,Photovoltaic system | Physics | Computer science | Electrical engineering | Engineering,13
+https://openalex.org/A5042949736,Rachid Mansouri,Algeria,Mouloud Mammeri University of Tizi-Ouzou,DZ,22,1334,58,Control theory (sociology) | Computer science | Artificial intelligence | Engineering | Control (management),13
+https://openalex.org/A5010175348,Abdelouahed Tounsi,Algeria,Université Djilali de Sidi Bel Abbès,DZ,96,29020,674,Materials science | Composite material | Structural engineering | Physics | Engineering,13
+https://openalex.org/A5075337649,Nadjet Kamel,Algeria,University Ferhat Abbas of Setif,DZ,15,777,63,Computer science | Data mining | Algorithm | Artificial intelligence | Mathematics,13
+https://openalex.org/A5031862480,Hammoudi Abderazek,Algeria,University Ferhat Abbas of Setif,DZ,17,1240,43,Algorithm | Computer science | Mathematical optimization | Engineering | Mathematics,13
+https://openalex.org/A5071869967,Leïla Hayet Mouss,Algeria,University of Batna 1,DZ,14,825,116,Computer science | Artificial intelligence | Engineering | Mathematics | Operating system,13
+https://openalex.org/A5057479607,Salima Harrat,Algeria,École Normale Supérieure de Bouzareah Alger,DZ,9,374,18,Arabic | Computer science | Artificial intelligence | Linguistics | Philosophy,13
+https://openalex.org/A5077569210,Mourad Nouioua,Algeria,University of Guelma,DZ,17,1019,55,Materials science | Computer science | Machining | Engineering | Composite material,13
+https://openalex.org/A5076152895,Ramdane Maamri,Algeria,Université Constantine 2,DZ,10,600,136,Computer science | Distributed computing | Programming language | Artificial intelligence | Mathematics,13
+https://openalex.org/A5029502151,Ahmed Cherif Mazari,Algeria,University Yahia Fares of Medea,DZ,13,404,44,Computer science | Artificial intelligence | Deep learning | Machine learning | Mathematics,13
+https://openalex.org/A5020390140,Abdeljalil Gattal,Algeria,Université Larbi Tébessi,DZ,15,543,53,Computer science | Pattern recognition (psychology) | Artificial intelligence | Image (mathematics) | Feature extraction,13
+https://openalex.org/A5078021027,Djamel Ghernaout,Algeria,Qassim University,SA,50,8215,265,Chemistry | Materials science | Environmental science | Engineering | Organic chemistry,13
+https://openalex.org/A5008190438,Lamia Berkani,Algeria,University of Sciences and Technology Houari Boumediene,DZ,8,242,58,Computer science | Information retrieval | Artificial intelligence | World Wide Web | Machine learning,13
+https://openalex.org/A5055260640,Farida Bouarab‐Dahmani,Algeria,Mouloud Mammeri University of Tizi-Ouzou,DZ,5,88,29,Computer science | Artificial intelligence | Philosophy | Mathematics | Epistemology,13
+https://openalex.org/A5048405710,Mohamed Khireddine Kholladi,Algeria,Constantine 1 University,DZ,9,280,70,Computer science | Artificial intelligence | Information retrieval | Philosophy | Epistemology,13
+https://openalex.org/A5001877199,Saber Benharzallah,Algeria,University of Batna 1,DZ,11,407,80,Computer science | Computer network | Programming language | Artificial intelligence | Mathematics,13
+https://openalex.org/A5044021030,Khaled Lounnas,Algeria,University of Sciences and Technology Houari Boumediene,DZ,5,86,29,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,13
+https://openalex.org/A5049814728,Abderrazak Sebaa,Algeria,University of Béjaïa,DZ,9,1099,32,Computer science | Artificial intelligence | Data science | Engineering | Economics,12
+https://openalex.org/A5083800207,Salim Labiod,Algeria,University of Jijel,DZ,19,1915,97,Control theory (sociology) | Computer science | Artificial intelligence | Physics | Control (management),12
+https://openalex.org/A5008004245,Yazid Tikhamarine,Algeria,University of Sciences and Technology Houari Boumediene,DZ,13,1311,20,Mathematics | Computer science | Statistics | Artificial intelligence | Machine learning,12
+https://openalex.org/A5084014354,Abdelfatah Charef,Algeria,Constantine 1 University,DZ,20,2385,98,Control theory (sociology) | Mathematics | Artificial intelligence | Computer science | Control (management),12
+https://openalex.org/A5073992054,Bilal Taghezouit,Algeria,Polytechnic School of Algiers,DZ,17,1364,53,Photovoltaic system | Computer science | Electrical engineering | Engineering | Mathematics,12
+https://openalex.org/A5111523299,Mohamed Tarek Khadir,Algeria,Badji Mokhtar-Annaba University,DZ,15,894,75,Computer science | Artificial intelligence | Physics | Engineering | Mathematics,12
+https://openalex.org/A5056845525,Nadir Boutasseta,Algeria,Research Center in Industrial Technologies,DZ,19,1469,56,Computer science | Artificial intelligence | Engineering | Electrical engineering | Physics,12
+https://openalex.org/A5016950095,Nabil Zerrouki,Algeria,University of Sciences and Technology Houari Boumediene,DZ,15,816,37,Computer science | Artificial intelligence | Machine learning | Pattern recognition (psychology) | Computer vision,12
+https://openalex.org/A5013140133,Yacine Benguerba,Algeria,University Ferhat Abbas of Setif,DZ,49,6785,256,Chemistry | Materials science | Chemical engineering | Organic chemistry | Engineering,12
+https://openalex.org/A5031909800,Abdellah Kouzou,Algeria,Ziane Achour University of Djelfa,DZ,18,1776,276,Computer science | Artificial intelligence | Engineering | Electrical engineering | Physics,12
+https://openalex.org/A5005025214,Yasmine Harbi,Algeria,University Ferhat Abbas of Setif,DZ,12,478,32,Computer science | Internet of Things | Computer security | Artificial intelligence | The Internet,12
+https://openalex.org/A5045292950,Mohammed Abdelfetah Ghriga,Algeria,Centre National de la Recherche Scientifique,FR,17,771,25,Materials science | Chemistry | Computer science | Engineering | Organic chemistry,12
+https://openalex.org/A5051229554,Hocine Ouaer,Algeria,University of Boumerdes,DZ,14,599,18,Computer science | Machine learning | Artificial intelligence | Engineering | Statistics,12
+https://openalex.org/A5006883497,Abdelkader Laouid,Algeria,University of Béjaïa,DZ,18,1051,129,Computer science | Artificial intelligence | Computer security | Computer network | Mathematics,12
+https://openalex.org/A5027485520,Benamar Kadri,Algeria,University of Abou Bekr Belkaïd,DZ,15,557,46,Computer science | Computer security | Computer network | Wireless | Telecommunications,12
+https://openalex.org/A5077031055,Abdelkader Belkhir,Algeria,University of Algiers Benyoucef Benkhedda,DZ,10,333,79,Computer science | Web service | Artificial intelligence | World Wide Web | Computer security,12
+https://openalex.org/A5036148374,Selma Khouri,Algeria,Université de Poitiers,FR,10,324,53,Computer science | Data warehouse | Database | Information retrieval | Philosophy,12
+https://openalex.org/A5073086303,Sadik Bessou,Algeria,University Ferhat Abbas of Setif,DZ,4,36,24,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,12
+https://openalex.org/A5052031811,Mhania Guerti,Algeria,Polytechnic School of Algiers,DZ,8,208,73,Computer science | Speech recognition | Artificial intelligence | Linguistics | Philosophy,12
+https://openalex.org/A5038478629,Karima Benatchba,Algeria,École Nationale Supérieure d'Informatique,DZ,13,1127,119,Computer science | Artificial intelligence | Machine learning | Algorithm | Mathematics,11
+https://openalex.org/A5049935664,Mouloud Denaï,Algeria,University of Sheffield,GB,28,3256,189,Computer science | Engineering | Artificial intelligence | Control (management) | Electrical engineering,11
+https://openalex.org/A5025252443,Sabir Messalti,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,16,1624,51,Computer science | Engineering | Electrical engineering | Control (management) | Artificial intelligence,11
+https://openalex.org/A5075599238,Samir Ladaci,Algeria,University of Skikda,DZ,19,1463,133,Control theory (sociology) | Mathematics | Computer science | Control (management) | Artificial intelligence,11
+https://openalex.org/A5019331150,Amer Draa,Algeria,Constantine 1 University,DZ,17,1179,57,Computer science | Artificial intelligence | Algorithm | Machine learning | Mathematics,11
+https://openalex.org/A5046226112,El Madjid Berkouk,Algeria,Polytechnic School of Algiers,DZ,26,2374,164,Computer science | Voltage | Electrical engineering | Engineering | Artificial intelligence,11
+https://openalex.org/A5104013629,Noureddine Settou,Algeria,Renewable Energy Development Center,DZ,26,2511,84,Environmental science | Physics | Engineering | Economics | Electrical engineering,11
+https://openalex.org/A5041095526,Mohamed Meddi,Algeria,École Nationale Supérieure d'Hydraulique,DZ,28,3192,258,Geology | Hydrology (agriculture) | Environmental science | Geography | Geotechnical engineering,11
+https://openalex.org/A5030823020,Asma Belhadi,Algeria,University of Sciences and Technology Houari Boumediene,DZ,26,2218,97,Computer science | Artificial intelligence | Data mining | Machine learning | Programming language,11
+https://openalex.org/A5012570691,Kada Bouchouicha,Algeria,Renewable Energy Development Center,DZ,20,1319,78,Environmental science | Meteorology | Computer science | Engineering | Physics,11
+https://openalex.org/A5104187076,Hassina Seridi,Algeria,Badji Mokhtar-Annaba University,DZ,10,488,41,Computer science | Artificial intelligence | World Wide Web | Data mining | Machine learning,11
+https://openalex.org/A5085819404,Belkacem Mahdad,Algeria,University of Biskra,DZ,20,1556,110,Computer science | Power (physics) | Engineering | Physics | Quantum mechanics,11
+https://openalex.org/A5075522951,Mohamed Sahraoui,Algeria,University of Biskra,DZ,19,1210,77,Computer science | Voltage | Engineering | Artificial intelligence | Electrical engineering,11
+https://openalex.org/A5053509459,Abdelkrim Boukabou,Algeria,University of Jijel,DZ,19,1205,85,Computer science | Control theory (sociology) | Artificial intelligence | Mathematics | Control (management),11
+https://openalex.org/A5071850143,Djallel Eddine Boubiche,Algeria,University of Batna 1,DZ,19,1042,54,Computer science | Wireless sensor network | Computer network | Wireless | Telecommunications,11
+https://openalex.org/A5022152198,Taha Zerrouki,Algeria,École Nationale Supérieure d'Informatique,DZ,7,162,20,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,11
+https://openalex.org/A5039051309,Imed Bouchrika,Algeria,Mohamed-Cherif Messaadia University,DZ,17,2168,52,Computer science | Gait | Computer vision | Artificial intelligence | Biology,11
+https://openalex.org/A5082362296,Abdallah Meraoumia,Algeria,University of Sciences and Technology Houari Boumediene,DZ,13,723,121,Biometrics | Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision,11
+https://openalex.org/A5021328229,Mohamed Touahria,Algeria,University Ferhat Abbas of Setif,DZ,8,393,25,Computer science | Artificial intelligence | Algorithm | Linguistics | Philosophy,11
+https://openalex.org/A5043466376,Rachid Boudour,Algeria,Badji Mokhtar University,DZ,7,205,40,Computer science | Computer security | Artificial intelligence | World Wide Web | Operating system,11
+https://openalex.org/A5020489079,Salah Hanini,Algeria,University Yahia Fares of Medea,DZ,22,1472,126,Artificial neural network | Computer science | Chemistry | Physics | Artificial intelligence,11
+https://openalex.org/A5046314899,Dalila Boughaci,Algeria,University of Sciences and Technology Houari Boumediene,DZ,15,898,115,Computer science | Mathematical optimization | Artificial intelligence | Mathematics | Algorithm,11
+https://openalex.org/A5036260493,Karim Bouamrane,Algeria,Université Oran 1 Ahmed Ben Bella,DZ,11,431,71,Computer science | Operations research | Artificial intelligence | Engineering | Mathematics,11
+https://openalex.org/A5025494269,Issam Bendib,Algeria,Université Larbi Tébessi,DZ,8,215,39,Computer science | Artificial intelligence | Machine learning | Deep learning | Medicine,11
+https://openalex.org/A5011583998,Adel Alti,Algeria,University Ferhat Abbas of Setif,DZ,12,624,142,Computer science | Artificial intelligence | Computer security | Philosophy | Operating system,11
+https://openalex.org/A5013971232,Nora Taleb,Algeria,Badji Mokhtar-Annaba University,DZ,4,87,29,Computer science | Ontology | Artificial intelligence | Philosophy | Epistemology,11
+https://openalex.org/A5011216397,Sihem Slatnia,Algeria,University of Biskra,DZ,10,305,40,Computer science | Machine learning | Artificial intelligence | Deep learning | Pattern recognition (psychology),11
+https://openalex.org/A5029349017,Mohamed Hafidi,Algeria,Badji Mokhtar University,DZ,11,420,57,Computer science | Mathematics education | Artificial intelligence | Multimedia | Psychology,11
+https://openalex.org/A5004343056,Nasreddine Lagraa,Algeria,University of Laghouat,DZ,23,1924,95,Computer science | Computer network | Computer security | Wireless | Telecommunications,11
+https://openalex.org/A5038339099,Djamil Aı̈ssani,Algeria,University of Béjaïa,DZ,21,1799,329,Computer science | Mathematics | Computer network | Physics | Statistics,11
+https://openalex.org/A5063809037,Messaouda Fareh,Algeria,University of Blida,DZ,8,141,29,Computer science | Information retrieval | Artificial intelligence | Philosophy | Epistemology,11
+https://openalex.org/A5060927107,Meriem Djezzar,Algeria,University of Constantine 3,,7,109,22,Computer science | Artificial intelligence | Semantic Web | Epistemology | Philosophy,11
+https://openalex.org/A5079458548,Zair Bouzidi,Algeria,University of Béjaïa,DZ,7,84,14,Computer science | Data science | World Wide Web | Political science | Law,11
+https://openalex.org/A5112608251,Aaron Courville,Algeria,Centre Universitaire de Mila,DZ,77,82960,378,Computer science | Artificial intelligence | Machine learning | Artificial neural network | Mathematics,10
+https://openalex.org/A5086483064,Othmane Friha,Algeria,Badji Mokhtar-Annaba University,DZ,13,2643,15,Computer science | Cloud computing | Computer security | Artificial intelligence | Operating system,10
+https://openalex.org/A5034540351,Amir Benzaoui,Algeria,University of Bouira,DZ,16,1193,37,Artificial intelligence | Computer science | Pattern recognition (psychology) | Computer vision | Image (mathematics),10
+https://openalex.org/A5103157931,R. Ibtiouen,Algeria,Polytechnic School of Algiers,DZ,22,2415,145,Physics | Computer science | Engineering | Electrical engineering | Artificial intelligence,10
+https://openalex.org/A5065534050,Houssem R. E. H. Bouchekara,Algeria,University of Constantine 3,DZ,29,3828,150,Computer science | Physics | Electrical engineering | Engineering | Mathematics,10
+https://openalex.org/A5065800564,Mourad Haddadi,Algeria,Polytechnic School of Algiers,DZ,25,3462,99,Photovoltaic system | Computer science | Physics | Electrical engineering | Engineering,10
+https://openalex.org/A5035078864,Mohammed Lamine Kherfi,Algeria,University of Ouargla,DZ,13,1033,56,Computer science | Pattern recognition (psychology) | Artificial intelligence | Image (mathematics) | Mathematics,10
+https://openalex.org/A5036874351,H. Salhi,Algeria,University of Blida,DZ,17,1332,47,Computer science | Mathematics | Artificial intelligence | Engineering | Physics,10
+https://openalex.org/A5018335274,Nabil Neggaz,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,16,1231,25,Algorithm | Computer science | Pattern recognition (psychology) | Artificial intelligence | Philosophy,10
+https://openalex.org/A5064952645,Saïd Djennoune,Algeria,Mouloud Mammeri University of Tizi-Ouzou,DZ,22,1722,111,Control theory (sociology) | Computer science | Mathematics | Control (management) | Artificial intelligence,10
+https://openalex.org/A5059211905,Mohamed Boudour,Algeria,University of Sciences and Technology Houari Boumediene,DZ,23,1571,166,Computer science | Engineering | Power (physics) | Physics | Quantum mechanics,10
+https://openalex.org/A5016476518,Nabila Labraoui,Algeria,University of Abou Bekr Belkaïd,DZ,18,1031,68,Computer science | Wireless sensor network | Computer network | Computer security | Telecommunications,10
+https://openalex.org/A5071074098,Amine Khaldi,Algeria,University of Ouargla,DZ,22,1418,57,Computer science | Digital watermarking | Artificial intelligence | Computer vision | Image (mathematics),10
+https://openalex.org/A5006349780,Salima Ouadfel,Algeria,Université Constantine 2,DZ,15,728,40,Computer science | Artificial intelligence | Pattern recognition (psychology) | Algorithm | Mathematics,10
+https://openalex.org/A5058761946,Idir Belaidi,Algeria,University of Boumerdes,DZ,14,794,50,Structural engineering | Algorithm | Computer science | Mathematics | Engineering,10
+https://openalex.org/A5110292157,K. Benmahammed,Algeria,University Ferhat Abbas of Setif,DZ,14,1042,113,Control theory (sociology) | Computer science | Artificial intelligence | Mathematics | Control (management),10
+https://openalex.org/A5087330894,F. Bereksi‐Reguig,Algeria,University of Abou Bekr Belkaïd,DZ,18,1252,77,Computer science | Artificial intelligence | Medicine | Pattern recognition (psychology) | Speech recognition,10
+https://openalex.org/A5058157475,Hamouda Boutaghane,Algeria,Badji Mokhtar University,DZ,16,875,57,Environmental science | Hydrology (agriculture) | Computer science | Geography | Geology,10
+https://openalex.org/A5072827769,Youcef Brik,Algeria,Université de M'Sila,DZ,10,501,47,Computer science | Artificial intelligence | Machine learning | Pattern recognition (psychology) | Medicine,10
+https://openalex.org/A5085083106,M. Teguar,Algeria,Polytechnic School of Algiers,DZ,21,1295,103,Voltage | Computer science | Electrical engineering | Engineering | Physics,10
+https://openalex.org/A5037070255,Djaafar Zouache,Algeria,University Mohamed El Bachir El Ibrahimi of Bordj Bou Arreridj,DZ,14,746,30,Computer science | Mathematical optimization | Artificial intelligence | Algorithm | Mathematics,10
+https://openalex.org/A5075305664,Nesma Settouti,Algeria,University of Abou Bekr Belkaïd,DZ,11,507,77,Computer science | Artificial intelligence | Pattern recognition (psychology) | Machine learning | Data mining,10
+https://openalex.org/A5077905852,Ahmed Bouraiou,Algeria,Ahmed Draia University,DZ,22,2187,95,Photovoltaic system | Computer science | Engineering | Electrical engineering | Physics,10
+https://openalex.org/A5037110257,Mustapha Réda Senouci,Algeria,Paris-Est Sup,FR,18,1216,125,Computer science | Wireless sensor network | Computer network | Telecommunications | Distributed computing,10
+https://openalex.org/A5063123858,Abdelhamid Djeffal,Algeria,University of Biskra,DZ,7,251,28,Computer science | Support vector machine | Artificial intelligence | Machine learning | Mathematics,10
+https://openalex.org/A5043070131,Riheb Hadji,Algeria,University Ferhat Abbas of Setif,DZ,35,3207,118,Geology | Environmental science | Geomorphology | Geotechnical engineering | Geography,10
+https://openalex.org/A5111515175,Malika Boudraa,Algeria,University of Sciences and Technology Houari Boumediene,DZ,10,491,41,Computer science | Speech recognition | Artificial intelligence | Acoustics | Physics,10
+https://openalex.org/A5079236622,A. Aboubou,Algeria,University of Biskra,DZ,16,871,71,Physics | Computer science | Engineering | Electrical engineering | Quantum mechanics,10
+https://openalex.org/A5057081296,Chirihane Gherbi,Algeria,Larbi Ben M'hidi University of Oum El Bouaghi,DZ,10,389,38,Computer science | Computer network | Artificial intelligence | Distributed computing | Machine learning,10
+https://openalex.org/A5023765427,Seydali Ferahtia,Algeria,Université de M'Sila,DZ,21,1228,41,Computer science | Power (physics) | Engineering | Mathematics | Physics,10
+https://openalex.org/A5112487583,Noureddine Zeraibi,Algeria,University of Boumerdes,DZ,11,537,21,Computer science | Machine learning | Algorithm | Artificial intelligence | Mathematics,10
+https://openalex.org/A5044226348,F. Djeffal,Algeria,University of Batna 1,DZ,35,3209,252,Materials science | Optoelectronics | Computer science | Nanotechnology | Engineering,10
+https://openalex.org/A5071351787,Salah Boulaaras,Algeria,Qassim University,SA,27,3157,378,Mathematics | Physics | Computer science | Mathematical analysis | Applied mathematics,10
+https://openalex.org/A5039636088,Abdellatif Rahmoun,Algeria,Higher National Veterinary School,DZ,11,469,67,Computer science | Wireless sensor network | Artificial intelligence | Computer network | Machine learning,10
+https://openalex.org/A5086841364,Hichem Rahab,Algeria,University of Constantine 3,,5,115,19,Computer science | Artificial intelligence | Linguistics | Mathematics | Philosophy,10
+https://openalex.org/A5007627975,Asma Saighi,Algeria,Larbi Ben M'hidi University of Oum El Bouaghi,DZ,7,105,33,Adaptation (eye) | Computer science | Artificial intelligence | Human–computer interaction | World Wide Web,10
+https://openalex.org/A5047029722,Hafida Bouarfa,Algeria,University of Blida,DZ,11,319,51,Computer science | Computer security | Artificial intelligence | Machine learning | Engineering,10
+https://openalex.org/A5089769879,Abdelmalek Boudries,Algeria,University of Béjaïa,DZ,8,140,27,Computer science | Artificial intelligence | World Wide Web | Political science | Law,10
+https://openalex.org/A5031615413,Fouzia Benchikha,Algeria,Constantine 1 University,DZ,4,78,31,Computer science | Artificial intelligence | Information retrieval | Epistemology | Philosophy,10
+https://openalex.org/A5028317399,Rachid Chalal,Algeria,École Nationale Supérieure d'Informatique,DZ,8,175,51,Computer science | Knowledge management | World Wide Web | Programming language | Engineering,10
+https://openalex.org/A5101749244,Hamid Azzoune,Algeria,University of Algiers Benyoucef Benkhedda,DZ,6,99,40,Computer science | Artificial intelligence | Linguistics | Philosophy | Data mining,10
+https://openalex.org/A5049252422,Attia Nehar,Algeria,University of Laghouat,DZ,4,58,22,Computer science | Arabic | Natural language processing | Artificial intelligence | Linguistics,10
+https://openalex.org/A5073882220,Kamel Kara,Algeria,University of Blida,DZ,18,1531,70,Control theory (sociology) | Computer science | Artificial intelligence | Control (management) | Engineering,9
+https://openalex.org/A5017113211,Abdelhamid Bounemeur,Algeria,University of Constantine 3,,15,1336,24,Control theory (sociology) | Computer science | Control (management) | Artificial intelligence | Physics,9
+https://openalex.org/A5026439575,Yassine Meraihi,Algeria,University of Boumerdes,DZ,18,1695,78,Computer science | Artificial intelligence | Algorithm | Mathematical optimization | Mathematics,9
+https://openalex.org/A5072169633,Kacem Gairaa,Algeria,Renewable Energy Development Center,DZ,17,1076,32,Computer science | Physics | Meteorology | Artificial intelligence | Mathematics,9
+https://openalex.org/A5080832103,Doudja Souag-Gamane,Algeria,University of Sciences and Technology Houari Boumediene,DZ,13,1281,23,Computer science | Mathematics | Statistics | Artificial intelligence | Geography,9
+https://openalex.org/A5067011495,Ahmed Ahmim,Algeria,Mohamed-Cherif Messaadia University,DZ,12,741,32,Computer science | Intrusion detection system | Computer security | Artificial intelligence | Machine learning,9
+https://openalex.org/A5033443105,Abdelaziz Kheloui,Algeria,Polytechnic School of Algiers,DZ,19,1591,81,Engineering | Computer science | Electrical engineering | Voltage | Physics,9
+https://openalex.org/A5082065520,Saïd Drid,Algeria,University of Batna 1,DZ,19,1655,172,Computer science | Engineering | Control (management) | Electrical engineering | Artificial intelligence,9
+https://openalex.org/A5113874774,Nait Amar Menad,Algeria,Sonatrach (Algeria),DZ,9,547,10,Computer science | Artificial intelligence | Machine learning | Mathematics | Statistics,9
+https://openalex.org/A5063215270,Yue Dong,Algeria,University of Amsterdam,NL,20,1733,105,Automatic summarization | Computer science | Artificial intelligence | Machine learning | Natural language processing,9
+https://openalex.org/A5023649619,Sofiane Bououden,Algeria,University of Constantine 3,,14,1125,66,Control theory (sociology) | Computer science | Artificial intelligence | Engineering | Control (management),9
+https://openalex.org/A5091433563,Labib Sadek Terrissa,Algeria,University of Biskra,DZ,12,624,62,Computer science | Artificial intelligence | Machine learning | Engineering | Operating system,9
+https://openalex.org/A5049287048,Sabrina Abdeddaim,Algeria,University of Biskra,DZ,11,705,26,Physics | Computer science | Engineering | Electrical engineering | Artificial intelligence,9
+https://openalex.org/A5078497025,Mohammed Feham,Algeria,University of Abou Bekr Belkaïd,DZ,22,1512,131,Computer science | Physics | Computer network | Telecommunications | Engineering,9
+https://openalex.org/A5033556269,Abdelhak Boubetra,Algeria,University Mohamed El Bachir El Ibrahimi of Bordj Bou Arreridj,DZ,7,309,50,Computer science | World Wide Web | Artificial intelligence | Engineering | Mathematics,9
+https://openalex.org/A5008618110,Abdelhamid Benakcha,Algeria,University of Biskra,DZ,18,831,49,Computer science | Artificial intelligence | Engineering | Electrical engineering | Control (management),9
+https://openalex.org/A5066580028,Abdelouahab Attıa,Algeria,University Mohamed El Bachir El Ibrahimi of Bordj Bou Arreridj,DZ,12,471,63,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Mathematics,9
+https://openalex.org/A5049717279,Tarek Lemaoui,Algeria,University Ferhat Abbas of Setif,DZ,32,2504,63,Eutectic system | Chemistry | Materials science | Organic chemistry | Engineering,9
+https://openalex.org/A5049498271,Ammar Chouchane,Algeria,University Yahia Fares of Medea,DZ,14,566,56,Computer science | Pattern recognition (psychology) | Artificial intelligence | Mathematics | Sociology,9
+https://openalex.org/A5022237748,Bilel Zeroualı,Algeria,Hassiba Benbouali University of Chlef,DZ,21,994,74,Environmental science | Geology | Computer science | Geography | Biology,9
+https://openalex.org/A5036283689,Ahmed Hafaifa,Algeria,Ziane Achour University of Djelfa,DZ,20,1601,215,Computer science | Artificial intelligence | Engineering | Physics | Mechanical engineering,9
+https://openalex.org/A5075562017,Ali Belhocine,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,30,2590,109,Disc brake | Brake | Materials science | Physics | Engineering,9
+https://openalex.org/A5033244749,Brahami Menaouer,Algeria,Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf,DZ,10,403,36,Computer science | Knowledge management | Business | Artificial intelligence | Operating system,9
+https://openalex.org/A5086073765,Salim Chitroub,Algeria,University of Sciences and Technology Houari Boumediene,DZ,14,768,117,Biometrics | Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision,9
+https://openalex.org/A5012987955,Faiz Maazouzi,Algeria,Mohamed-Cherif Messaadia University,DZ,5,180,18,Recommender system | Computer science | Artificial intelligence | Machine learning | Data mining,9
+https://openalex.org/A5088219626,Amar Balla,Algeria,École Nationale Supérieure d'Informatique,DZ,10,408,76,Computer science | World Wide Web | Artificial intelligence | Philosophy | Mathematics,9
+https://openalex.org/A5069107071,Samir Bourekkache,Algeria,University of Biskra,DZ,9,439,68,Computer science | Artificial intelligence | Computer security | Distributed computing | Operating system,9
+https://openalex.org/A5100837225,Aïcha Mokhtari,Algeria,University of Sciences and Technology Houari Boumediene,DZ,11,423,73,Computer science | Philosophy | Artificial intelligence | Programming language | Mathematics,9
+https://openalex.org/A5087453147,M’hamed Mataoui,Algeria,Polytechnic School of Algiers,DZ,6,161,33,Computer science | Information retrieval | Artificial intelligence | Data mining | Mathematics,9
+https://openalex.org/A5071470693,Mohamed Seghir Hadj Ameur,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,8,255,16,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,9
+https://openalex.org/A5003397920,Abdelaziz Lakhfif,Algeria,University Ferhat Abbas of Setif,DZ,4,106,15,Computer science | Natural language processing | Arabic | Artificial intelligence | Linguistics,9
+https://openalex.org/A5057188614,Toufik Ziar,Algeria,Université Larbi Tébessi,DZ,13,507,36,Computer science | Mathematics | Control (management) | Physics | Artificial intelligence,9
+https://openalex.org/A5034364859,Ahmed Belaadi,Algeria,University of Skikda,DZ,32,3225,155,Materials science | Composite material | Mathematics | Engineering | Physics,9
+https://openalex.org/A5036568214,Zakaria Elberrichi,Algeria,Université Djilali de Sidi Bel Abbès,DZ,12,591,65,Computer science | Artificial intelligence | Machine learning | Pattern recognition (psychology) | Data mining,9
+https://openalex.org/A5081019870,Bilal Saoud,Algeria,University of Bouira,DZ,10,442,53,Computer science | Computer network | Artificial intelligence | Machine learning | Telecommunications,9
+https://openalex.org/A5110387783,Hassina Seridi-Bouchelaghem,Algeria,Badji Mokhtar University,DZ,8,261,43,Computer science | Programming language | Artificial intelligence | World Wide Web | Mathematics,9
+https://openalex.org/A5001584330,Hakim Bendjenna,Algeria,Université Larbi Tébessi,DZ,9,361,90,Biometrics | Computer science | Artificial intelligence | Computer security | Pattern recognition (psychology),9
+https://openalex.org/A5058996875,Hayet Farida Merouani,Algeria,Badji Mokhtar University,DZ,10,363,65,Computer science | Pattern recognition (psychology) | Artificial intelligence | Machine learning | Image (mathematics),9
+https://openalex.org/A5052637111,Djamel Tandjaoui,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,15,1066,42,Computer network | Computer science | Computer security | Engineering | Operating system,9
+https://openalex.org/A5067446889,Amar Djéradi,Algeria,University of Sciences and Technology Houari Boumediene,DZ,10,365,58,Physics | Computer science | Artificial intelligence | Speech recognition | Mathematics,9
+https://openalex.org/A5082446440,Rachida Djeradi,Algeria,University of Sciences and Technology Houari Boumediene,DZ,4,105,17,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,9
+https://openalex.org/A5015352291,Salim Belhadi,Algeria,University of Guelma,DZ,19,1363,87,Materials science | Metallurgy | Mechanical engineering | Engineering | Composite material,9
+https://openalex.org/A5059934999,Mohammed Said Souıd,Algeria,Université IBN Khaldoun Tiaret,DZ,14,528,64,Mathematics | Variable (mathematics) | Order (exchange) | Mathematical analysis | Applied mathematics,9
+https://openalex.org/A5089203688,Mahnane Lamia,Algeria,Badji Mokhtar University,DZ,10,406,60,Computer science | Mathematics education | Artificial intelligence | Multimedia | Psychology,9
+https://openalex.org/A5037509084,Abdelmadjid Benmachiche,Algeria,Badji Mokhtar University,DZ,10,222,40,Computer science | Machine learning | Artificial intelligence | Computer security | Key (lock),9
+https://openalex.org/A5060801076,Hakima Mellah,Algeria,Centre de Recherche sur l'Information Scientifique et Technique,DZ,5,73,34,Computer science | Information retrieval | World Wide Web | Artificial intelligence | Operating system,9
+https://openalex.org/A5090432216,Fahima Nader,Algeria,École Nationale Supérieure d'Informatique,DZ,7,463,37,Computer science | World Wide Web | Artificial intelligence | Data mining | Information retrieval,9
+https://openalex.org/A5058997422,Amina Madani,Algeria,University of Blida,DZ,5,98,21,Computer science | Artificial intelligence | World Wide Web | Psychology | Economics,9
+https://openalex.org/A5070218325,Farek Lazhar,Algeria,Badji Mokhtar University,DZ,4,60,18,Computer science | Artificial intelligence | Natural language processing | Linguistics | Philosophy,9
+https://openalex.org/A5035070527,Rahma Djiroun,Algeria,University of Sciences and Technology Houari Boumediene,DZ,4,53,17,Online analytical processing | Data warehouse | Computer science | Data science | Data mining,9
+https://openalex.org/A5002432967,Djalila Boughareb,Algeria,Badji Mokhtar University,DZ,4,34,16,Computer science | Information retrieval | World Wide Web | Artificial intelligence | Data science,9
+https://openalex.org/A5003458315,Ahmed Lehireche,Algeria,Université Djilali de Sidi Bel Abbès,DZ,6,123,45,Computer science | Natural language processing | Artificial intelligence | Philosophy | Mathematics,9
+https://openalex.org/A5014756095,Hocine Teffahi,Algeria,University of Sciences and Technology Houari Boumediene,DZ,5,94,33,Physics | Computer science | Speech recognition | Artificial intelligence | Philosophy,9
+https://openalex.org/A5048785125,Aissa Amrouche,Algeria,Centre for Research and Development,ZW,10,201,38,Computer science | Speech recognition | Artificial intelligence | Pattern recognition (psychology) | Philosophy,9
+https://openalex.org/A5074258381,Hocine Belmili,Algeria,Renewable Energy Development Center,DZ,12,1308,45,Computer science | Engineering | Electrical engineering | Physics | Quantum mechanics,8
+https://openalex.org/A5053574980,Abdelhafid Zeroual,Algeria,University of Skikda,DZ,13,1169,29,Artificial intelligence | Computer science | Transport engineering | Engineering | Mathematics,8
+https://openalex.org/A5066104845,Abdelfetah Hentout,Algeria,Centre de Développement des Technologies Avancées,DZ,12,1219,51,Robot | Mobile robot | Computer science | Artificial intelligence | Engineering,8
+https://openalex.org/A5023871114,Saïd Rechak,Algeria,Polytechnic School of Algiers,DZ,21,1967,74,Materials science | Physics | Mathematics | Structural engineering | Engineering,8
+https://openalex.org/A5030538802,Asma Benmessaoud Gabis,Algeria,École Nationale Supérieure d'Informatique,DZ,15,1359,35,Computer science | Artificial intelligence | Algorithm | Mathematical optimization | Mathematics,8
+https://openalex.org/A5018394787,Ali Cheknane,Algeria,University of Laghouat,DZ,22,2247,129,Materials science | Physics | Optoelectronics | Engineering | Electrical engineering,8
+https://openalex.org/A5084368465,Fatima Benbouzid-Si Tayeb,Algeria,École Nationale Supérieure d'Informatique,DZ,11,524,67,Computer science | Mathematical optimization | Machine learning | Artificial intelligence | Mathematics,8
+https://openalex.org/A5060692667,Mohamed Ghrici,Algeria,Hassiba Benbouali University of Chlef,DZ,27,2406,84,Materials science | Compressive strength | Cement | Composite material | Geology,8
+https://openalex.org/A5080484799,Salah Eddine Bekhouche,Algeria,University of Biskra,DZ,13,652,70,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Face (sociological concept),8
+https://openalex.org/A5058195317,Fares Kahlessenane,Algeria,University of Ouargla,DZ,13,893,15,Digital watermarking | Watermark | Computer science | Artificial intelligence | Image (mathematics),8
+https://openalex.org/A5019939157,Salah Euschi,Algeria,University of Ouargla,DZ,14,908,15,Computer science | Digital watermarking | Watermark | Artificial intelligence | Image (mathematics),8
+https://openalex.org/A5028773415,Sabrina Aouaouda,Algeria,Mohamed-Cherif Messaadia University,DZ,10,804,37,Control theory (sociology) | Physics | Computer science | Control (management) | Artificial intelligence,8
+https://openalex.org/A5029783735,Mohamed Redouane Kafi,Algeria,University of Ouargla,DZ,22,1324,70,Computer science | Digital watermarking | Artificial intelligence | Computer vision | Image (mathematics),8
+https://openalex.org/A5044876884,Samir Zeghlache,Algeria,Université de M'Sila,DZ,19,1128,86,Control theory (sociology) | Computer science | Artificial intelligence | Engineering | Control (management),8
+https://openalex.org/A5085425992,Ali Djerioui,Algeria,Université de M'Sila,DZ,19,1052,69,Control theory (sociology) | Computer science | Control (management) | Engineering | Artificial intelligence,8
+https://openalex.org/A5113715165,Redha Benzid,Algeria,University of Batna 1,DZ,12,657,32,Computer science | Artificial intelligence | Algorithm | Mathematics | Image (mathematics),8
+https://openalex.org/A5086775025,Nacira Ghoualmi‐Zine,Algeria,Badji Mokhtar-Annaba University,DZ,11,526,84,Computer science | Computer network | Computer security | World Wide Web | Physics,8
+https://openalex.org/A5044480291,Nasreddine Taleb,Algeria,Université Djilali de Sidi Bel Abbès,DZ,16,755,77,Computer science | Computer vision | Artificial intelligence | Image (mathematics) | Mathematics,8
+https://openalex.org/A5048353781,Ammar Neçaïbia,Algeria,Ahmed Draia University,DZ,21,1803,86,Photovoltaic system | Computer science | Engineering | Electrical engineering | Physics,8
+https://openalex.org/A5000241588,Toufik Bouden,Algeria,University of Jijel,DZ,17,1088,71,Computer science | Mathematics | Artificial intelligence | Control (management) | Physics,8
+https://openalex.org/A5018527587,Soufiane Bentout,Algeria,University of Abou Bekr Belkaïd,DZ,19,1072,38,Mathematics | Nonlinear system | Applied mathematics | Population | Physics,8
+https://openalex.org/A5051059267,Hamouma Moumen,Algeria,University of Béjaïa,DZ,6,313,47,Computer science | Algorithm | Computer network | Distributed computing | Artificial intelligence,8
+https://openalex.org/A5048114949,Brahim Cherki,Algeria,University of Abou Bekr Belkaïd,DZ,15,951,96,Control theory (sociology) | Artificial intelligence | Computer science | Control (management) | Physics,8
+https://openalex.org/A5040811098,Mirco Ravanelli,Algeria,Centre Universitaire de Mila,DZ,21,1744,123,Computer science | Speech recognition | Artificial neural network | Artificial intelligence | Machine learning,8
+https://openalex.org/A5087572406,Fouzi Harrou,Abroad,King Abdullah University of Science and Technology,SA,51,7901,271,Computer science | Artificial intelligence | Machine learning | Mathematics | Engineering,54
+https://openalex.org/A5035730211,Mohamed Benbouzid,Abroad,Université de Bretagne Occidentale,FR,70,22205,922,Computer science | Artificial intelligence | Physics | Engineering | Electrical engineering,54
+https://openalex.org/A5090118631,Ying Sun,Abroad,King Abdullah University of Science and Technology,SA,56,11122,570,Computer science | Mathematics | Artificial intelligence | Statistics | Physics,53
+https://openalex.org/A5009358077,Okba Kazar,Abroad,University of Sharjah,AE,17,1365,284,Computer science | Artificial intelligence | Distributed computing | World Wide Web | Operating system,50
+https://openalex.org/A5057217204,Mohamed Abd Elaziz,Abroad,Zagazig University,EG,87,32173,563,Computer science | Algorithm | Artificial intelligence | Machine learning | Mathematics,43
+https://openalex.org/A5045715820,Habiba Drias,Abroad,National Institute of Informatics,JP,23,2041,270,Computer science | Artificial intelligence | Data mining | Algorithm | Mathematics,41
+https://openalex.org/A5029043022,Λέανδρος Μαγλαράς,Abroad,,,43,10197,339,Computer science | Artificial intelligence | Computer network | Computer security | Engineering,39
+https://openalex.org/A5075190563,Özgür Kişi,Abroad,Ilia State University,GE,106,37311,679,Computer science | Mathematics | Environmental science | Statistics | Artificial intelligence,32
+https://openalex.org/A5039474002,Imran Siddiqi,Abroad,,,32,3545,149,Computer science | Pattern recognition (psychology) | Artificial intelligence | Linguistics | Philosophy,31
+https://openalex.org/A5034196986,Ahmad Taher Azar,Abroad,Benha University,EG,68,18300,677,Computer science | Control theory (sociology) | Artificial intelligence | Control (management) | Physics,30
+https://openalex.org/A5035128702,Saad Harous,Abroad,United Arab Emirates University,AE,27,3340,298,Computer science | Computer network | Artificial intelligence | Distributed computing | Mathematics,29
+https://openalex.org/A5055199720,Giuseppe Grassi,Abroad,University of Salento,IT,38,5190,281,Computer science | Mathematics | Artificial intelligence | Physics | Quantum mechanics,29
+https://openalex.org/A5037331113,Yassine Himeur,Abroad,Qatar University,QA,44,6749,303,Computer science | Artificial intelligence | Machine learning | Mathematics | Engineering,26
+https://openalex.org/A5067624332,Mohammed A. A. Al‐qaness,Abroad,Wuhan University,CN,50,9703,202,Computer science | Artificial intelligence | Algorithm | Machine learning | Mathematics,26
+https://openalex.org/A5006507514,Ladjel Bellatreche,Abroad,École Nationale Supérieure de Mécanique et d'Aérotechnique,FR,24,2925,441,Computer science | Data warehouse | Database | Data mining | Information retrieval,24
+https://openalex.org/A5013750149,Mohammed Chadli,Abroad,Université de Picardie Jules Verne,FR,60,11930,466,Control theory (sociology) | Mathematics | Computer science | Control (management) | Artificial intelligence,23
+https://openalex.org/A5026478633,Maâmar Bettayeb,Abroad,King Abdulaziz University,SA,44,6506,351,Computer science | Mathematics | Artificial intelligence | Engineering | Physics,23
+https://openalex.org/A5090778317,Kamel Smaı̈li,Abroad,Laboratoire Lorrain de Recherche en Informatique et ses Applications,FR,18,1262,225,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,23
+https://openalex.org/A5088214859,Abdelmalik Taleb‐Ahmed,Abroad,Institut d'électronique de microélectronique et de nanotechnologie,FR,24,2706,236,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Mathematics,20
+https://openalex.org/A5033169668,Saad Mekhilef,Abroad,University of Malaya,MY,111,53916,1089,Computer science | Voltage | Electrical engineering | Engineering | Physics,20
+https://openalex.org/A5081909889,Abdelouahid Derhab,Abroad,King Saud University,SA,38,5522,157,Computer science | Computer network | Computer security | Artificial intelligence | Operating system,19
+https://openalex.org/A5045071979,Sherif S. M. Ghoneim,Abroad,Taif University,SA,44,6211,250,Computer science | Voltage | Electrical engineering | Engineering | Physics,19
+https://openalex.org/A5059536160,Alessandro Pavan,Abroad,University of Trieste,IT,46,9574,265,Economics | Computer science | Electrical engineering | Engineering | Physics,18
+https://openalex.org/A5057697626,Youcef Djenouri,Abroad,Norwegian University of Science and Technology,NO,39,4723,189,Computer science | Artificial intelligence | Data mining | Machine learning | Mathematics,18
+https://openalex.org/A5059139666,Mourad Abbas,Abroad,,,12,516,53,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,18
+https://openalex.org/A5013928164,Abdenour Hadid,Abroad,University of Oulu,FI,54,19606,288,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Sociology,17
+https://openalex.org/A5027283721,Samir Khatir,Abroad,Ghent University,BE,46,6415,219,Materials science | Computer science | Algorithm | Structural engineering | Engineering,17
+https://openalex.org/A5038668071,Magd Abdel Wahab,Abroad,Ho Chi Minh City University of Technology,VN,80,20514,796,Materials science | Composite material | Structural engineering | Computer science | Engineering,17
+https://openalex.org/A5091807952,Abdolhossein Hemmati‐Sarapardeh,Abroad,Shahid Bahonar University of Kerman,IR,52,8731,283,Materials science | Chemistry | Computer science | Organic chemistry | Engineering,17
+https://openalex.org/A5015408396,Mohit Bajaj,Abroad,Graphic Era University,IN,53,11174,535,Computer science | Electrical engineering | Engineering | Physics | Quantum mechanics,17
+https://openalex.org/A5031007388,Djelloul Bouchiha,Abroad,,,8,350,65,Computer science | Artificial intelligence | World Wide Web | Philosophy | Information retrieval,16
+https://openalex.org/A5090441509,Abderrahmane Lakas,Abroad,United Arab Emirates University,AE,36,4089,162,Computer science | Computer network | Wireless | Artificial intelligence | Telecommunications,16
+https://openalex.org/A5045421775,Abdelhamid Mellouk,Abroad,Paris-Est Sup,FR,27,3529,326,Computer science | Computer network | Distributed computing | Telecommunications | Artificial intelligence,16
+https://openalex.org/A5039829612,Tahar Kechadi,Abroad,University College Dublin,IE,37,5693,494,Computer science | Data mining | Computer security | Artificial intelligence | Operating system,16
+https://openalex.org/A5080801111,Omar Boussaïd,Abroad,Université Claude Bernard Lyon 1,FR,16,732,152,Data warehouse | Computer science | Information retrieval | Database | Data mining,16
+https://openalex.org/A5059823880,Ahmed Elbeltagi,Abroad,Mansoura University,EG,52,8788,302,Environmental science | Computer science | Geography | Mathematics | Biology,15
+https://openalex.org/A5072885718,Noureddine Zerhouni,Abroad,Centre National de la Recherche Scientifique,FR,51,11301,482,Prognostics | Computer science | Artificial intelligence | Reliability engineering | Engineering,15
+https://openalex.org/A5038787953,Seddik Bacha,Abroad,,,50,11919,678,Computer science | Physics | Electrical engineering | Engineering | Quantum mechanics,15
+https://openalex.org/A5078874097,Mohamed Becherif,Abroad,Université de technologie de belfort-montbéliard,FR,39,5298,294,Physics | Computer science | Engineering | Electrical engineering | Quantum mechanics,15
+https://openalex.org/A5071486132,Sidi‐Mohammed Senouci,Abroad,Centre Hospitalier de l'Agglomération de Nevers,FR,43,6149,286,Computer science | Computer network | Distributed computing | Telecommunications | Engineering,15
+https://openalex.org/A5079720434,Ahcène Bounceur,Abroad,Université de Bretagne Occidentale,FR,27,4126,295,Computer science | Wireless sensor network | Computer network | Mathematics | Engineering,15
+https://openalex.org/A5048872144,Yassine Drias,Abroad,,,8,173,55,Computer science | Machine learning | Artificial intelligence | Data mining | World Wide Web,15
+https://openalex.org/A5058467315,Abdessamed Réda Ghomari,Abroad,,,8,206,47,Computer science | Knowledge management | Process management | Business | Philosophy,15
+https://openalex.org/A5091500375,Seyedali Mirjalili,Abroad,Yonsei University,KR,132,141597,788,Computer science | Artificial intelligence | Algorithm | Mathematical optimization | Mathematics,14
+https://openalex.org/A5014705355,Anurag Malik,Abroad,Govind Ballabh Pant University of Agriculture and Technology,IN,48,5151,157,Biology | Computer science | Environmental science | Mathematics | Statistics,14
+https://openalex.org/A5055849526,Sid‐Ahmed Selouani,Abroad,Université de Moncton,CA,18,1469,234,Computer science | Speech recognition | Pattern recognition (psychology) | Artificial intelligence | Philosophy,14
+https://openalex.org/A5070829177,Nadhir Al‐Ansari,Abroad,,,75,23142,903,Geology | Biology | Environmental science | Geotechnical engineering | Geography,13
+https://openalex.org/A5021389231,Farid Melgani,Abroad,University of Trento,IT,55,11190,268,Computer science | Artificial intelligence | Pattern recognition (psychology) | Image (mathematics) | Mathematics,13
+https://openalex.org/A5078519359,Ahmed A. Ewees,Abroad,Damietta University,EG,55,11485,176,Computer science | Artificial intelligence | Machine learning | Algorithm | Mathematics,13
+https://openalex.org/A5020141143,Habib Benbouhenni,Abroad,İstanbul Nişantaşı Üniversitesi,TR,32,3376,221,Control theory (sociology) | Computer science | Control (management) | Engineering | Artificial intelligence,13
+https://openalex.org/A5053506086,Shahram Rezapour,Abroad,China Medical University Hospital,TW,51,10012,364,Physics | Mathematics | Computer science | Mathematical analysis | Applied mathematics,13
+https://openalex.org/A5009998510,Tarak Benkedjouh,Abroad,,,13,1318,38,Computer science | Artificial intelligence | Machine learning | Engineering | Physics,12
+https://openalex.org/A5070456393,Azzeddine Bakdi,Abroad,University of Oslo,NO,22,1687,42,Computer science | Artificial intelligence | Engineering | Physics | Quantum mechanics,12
+https://openalex.org/A5044752255,Abdeltif Amrane,Abroad,Centre National de la Recherche Scientifique,FR,63,15782,599,Chemistry | Materials science | Biology | Organic chemistry | Engineering,12
+https://openalex.org/A5068812101,Mourad Oussalah,Abroad,University of Birmingham,GB,32,3782,343,Computer science | Artificial intelligence | Mathematics | Programming language | Philosophy,12
+https://openalex.org/A5051474705,Allel Hadjali,Abroad,École Nationale Supérieure de Mécanique et d'Aérotechnique,FR,18,1207,227,Computer science | Mathematics | Information retrieval | Data mining | Artificial intelligence,12
+https://openalex.org/A5017104799,Abdelhalim Hafedh Dahou,Abroad,Zhejiang Normal University,CN,5,65,20,Computer science | Natural language processing | Artificial intelligence | Programming language | Philosophy,12
+https://openalex.org/A5042805664,Abbes Amira,Abroad,De Montfort University,GB,48,8990,476,Computer science | Artificial intelligence | Embedded system | Mathematics | Physics,11
+https://openalex.org/A5003801496,Najib Essounbouli,Abroad,Université de Reims Champagne-Ardenne,FR,23,2282,203,Control theory (sociology) | Physics | Computer science | Control (management) | Artificial intelligence,11
+https://openalex.org/A5081042741,Fadi Dornaika,Abroad,University of the Basque Country,ES,36,4919,426,Computer science | Artificial intelligence | Computer vision | Pattern recognition (psychology) | Mathematics,11
+https://openalex.org/A5062054104,Ado Adamou Abba Ari,Abroad,University of Maroua,CM,23,1859,98,Computer science | Computer network | Operating system | Telecommunications | Engineering,11
+https://openalex.org/A5030824332,Abdelghani Bouziane,Abroad,,,4,168,24,Computer science | Arabic | Artificial intelligence | Natural language processing | Philosophy,11
+https://openalex.org/A5036146217,Salim A. Messaoudi,Abroad,King Fahd University of Petroleum and Minerals,SA,46,6965,261,Mathematics | Mathematical analysis | Physics | Thermodynamics | Quantum mechanics,11
+https://openalex.org/A5079152917,Farid Meziane,Abroad,University of Derby,GB,19,1776,179,Computer science | Artificial intelligence | Natural language processing | World Wide Web | Philosophy,11
+https://openalex.org/A5066242048,Carlos T. Calafate,Abroad,Universitat Politècnica de València,ES,49,9980,542,Computer science | Computer network | Wireless | Telecommunications | Engineering,11
+https://openalex.org/A5052384287,Nacer Eddine Zarour,Abroad,,,8,280,73,Computer science | Process (computing) | Programming language | Engineering | Operating system,11
+https://openalex.org/A5053947754,Paolo Rosso,Abroad,Universitat Politècnica de València,ES,59,15424,729,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,11
+https://openalex.org/A5043935498,Mohammad Zounemat‐Kermani,Abroad,Shahid Bahonar University of Kerman,IR,46,7553,179,Computer science | Statistics | Machine learning | Artificial intelligence | Mathematics,10
+https://openalex.org/A5051386391,Sundarapandian Vaıdyanathan,Abroad,Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,IN,74,15021,618,Computer science | Control theory (sociology) | Artificial intelligence | Control (management) | Physics,10
+https://openalex.org/A5000640263,Jerry Chun‐Wei Lin,Abroad,Western Norway University of Applied Sciences,NO,66,19398,813,Computer science | Artificial intelligence | Data mining | Machine learning | Mathematics,10
+https://openalex.org/A5049119459,Samir Bendoukha,Abroad,Taibah University,SA,20,1178,98,Mathematics | Computer science | Applied mathematics | Artificial intelligence | Physics,10
+https://openalex.org/A5106468368,Abdelmalik Taleb‐Ahmed,Abroad,Institut d'électronique de microélectronique et de nanotechnologie,FR,19,1162,85,Medicine | Computer science | Artificial intelligence | Pattern recognition (psychology) | Mathematics,10
+https://openalex.org/A5058905109,Inas M. AlNashef,Abroad,Khalifa University of Science and Technology,AE,63,14177,203,Chemistry | Eutectic system | Catalysis | Organic chemistry | Alloy,10
+https://openalex.org/A5031823995,İlhami Çolak,Abroad,İstanbul Nişantaşı Üniversitesi,TR,37,4729,313,Computer science | Electrical engineering | Physics | Engineering | Artificial intelligence,10
+https://openalex.org/A5108139013,El‐Sayed M. El‐kenawy,Abroad,Higher Institute of Engineering,EG,54,8263,318,Computer science | Mathematics | Artificial intelligence | Algorithm | Machine learning,10
+https://openalex.org/A5048670346,Ashkan Jahanbani Ghahfarokhi,Abroad,Norwegian University of Science and Technology,NO,16,788,61,Computer science | Petroleum engineering | Geology | Mathematics | Engineering,10
+https://openalex.org/A5044446577,Farouk Zouari,Abroad,Tunis University,TN,17,757,46,Control theory (sociology) | Computer science | Control (management) | Artificial intelligence | Physics,10
+https://openalex.org/A5086816810,Hegazy Rezk,Abroad,Minia University,EG,67,15361,380,Computer science | Mathematics | Engineering | Electrical engineering | Physics,10
+https://openalex.org/A5002889826,Azeddine Houari,Abroad,Institut de Recherche en Energie Electrique de Nantes Atlantique,FR,26,1967,153,Physics | Computer science | Engineering | Electrical engineering | Artificial intelligence,10
+https://openalex.org/A5077231313,Jian Tang,Abroad,HEC Montréal,CA,40,9353,216,Computer science | Mathematics | Artificial intelligence | Machine learning | Theoretical computer science,10
+https://openalex.org/A5078232638,Sina Etemad,Abroad,Azarbaijan Shahid Madani University,IR,33,4235,189,Mathematics | Mathematical analysis | Applied mathematics | Computer science | Physics,10
+https://openalex.org/A5052372263,Brahim Lejdel,Abroad,,,6,146,43,Computer science | Machine learning | Artificial intelligence | Mathematics | Engineering,10
+https://openalex.org/A5109920301,Pierre‐Jean Charrel,Abroad,Université Toulouse - Jean Jaurès,FR,7,118,38,Computer science | Artificial intelligence | Programming language | Epistemology | Philosophy,10
+https://openalex.org/A5037953109,Zaher Mundher Yaseen‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬,Abroad,,,89,26887,627,Computer science | Environmental science | Artificial intelligence | Mathematics | Engineering,9
+https://openalex.org/A5003414781,Amar Ramdane-Chérif,Abroad,Université de Versailles Saint-Quentin-en-Yvelines,FR,23,2801,264,Computer science | Artificial intelligence | Human–computer interaction | Engineering | Mathematics,9
+https://openalex.org/A5090855504,Hamid Reza Karimi,Abroad,Politecnico di Milano,IT,107,39589,1262,Control theory (sociology) | Computer science | Mathematics | Artificial intelligence | Control (management),9
+https://openalex.org/A5071730584,Alhassan Mabrouk,Abroad,Beni-Suef University,EG,12,577,12,Computer science | Artificial intelligence | Data mining | Machine learning | Philosophy,9
+https://openalex.org/A5043479229,Majdi Mansouri,Abroad,Texas A&M University at Qatar,QA,36,4878,342,Computer science | Fault detection and isolation | Artificial intelligence | Mathematics | Engineering,9
+https://openalex.org/A5023383799,Ahmed M. Helmi,Abroad,Zagazig University,EG,20,1878,54,Computer science | Artificial intelligence | Algorithm | Mathematics | Engineering,9
+https://openalex.org/A5056705041,Zahid Akhtar,Abroad,Institut National de la Recherche Scientifique,CA,30,3493,182,Biometrics | Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer security,9
+https://openalex.org/A5022862584,Qin Zhou,Abroad,Wuhan Donghu University,CN,77,20545,779,Physics | Computer science | Mathematics | Nonlinear system | Quantum mechanics,9
+https://openalex.org/A5020005824,Anjan Biswas,Abroad,Alabama Agricultural and Mechanical University,US,104,40460,1227,Physics | Mathematics | Soliton | Nonlinear system | Quantum mechanics,9
+https://openalex.org/A5017608892,Somaya Al-Máadeed,Abroad,Qatar University,QA,55,11837,419,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Philosophy,9
+https://openalex.org/A5108123139,Rana Muhammad Adnan,Abroad,Hohai University,CN,36,3483,78,Mean squared error | Computer science | Mathematics | Statistics | Artificial intelligence,9
+https://openalex.org/A5084074039,Mohammed Atiquzzaman,Abroad,University of Oklahoma,US,62,14592,571,Computer science | Computer network | Wireless | Telecommunications | Operating system,9
+https://openalex.org/A5057176691,Ali Rıza Yıldız,Abroad,Bursa Uludağ Üni̇versi̇tesi̇,TR,78,13003,209,Algorithm | Computer science | Mathematical optimization | Engineering | Mathematics,9
+https://openalex.org/A5071517100,Meysam Alizamir,Abroad,University of Tabriz,IR,27,2592,72,Artificial neural network | Computer science | Artificial intelligence | Machine learning | Mathematics,9
+https://openalex.org/A5011112442,Youcef Belkhier,Abroad,Institut de Recherche de l’École Navale,FR,23,1667,93,Computer science | Electrical engineering | Engineering | Artificial intelligence | Physics,9
+https://openalex.org/A5038682039,Philippe Fournier‐Viger,Abroad,Harbin Institute of Technology,CN,56,12744,493,Computer science | Data mining | Artificial intelligence | Algorithm | Mathematics,9
+https://openalex.org/A5081414719,Wathiq Mansoor,Abroad,University of Dubai,AE,28,3019,292,Computer science | Artificial intelligence | Machine learning | Engineering | Mathematics,9
+https://openalex.org/A5018185241,Zaid Odibat,Abroad,Al-Balqa Applied University,JO,50,10794,146,Mathematics | Physics | Applied mathematics | Mathematical analysis | Quantum mechanics,9
+https://openalex.org/A5068268080,Mohamed El Amine Ben Seghier,Abroad,Ton Duc Thang University,VN,32,2665,73,Materials science | Artificial intelligence | Computer science | Engineering | Mathematics,9
+https://openalex.org/A5080120676,Shaher Momani,Abroad,University of Jordan,JO,84,24105,543,Mathematics | Physics | Applied mathematics | Computer science | Mathematical analysis,9
+https://openalex.org/A5084088234,Mahiéddine Djoudi,Abroad,Université de Poitiers,FR,8,412,102,Computer science | World Wide Web | Multimedia | Human–computer interaction | Philosophy,9
+https://openalex.org/A5082471864,Al‐Sakib Khan Pathan,Abroad,United International University,BD,27,3497,409,Computer science | Computer network | Computer security | Telecommunications | World Wide Web,9
+https://openalex.org/A5013681068,Demba Diallo,Abroad,Supélec,FR,35,6207,310,Computer science | Physics | Artificial intelligence | Engineering | Electrical engineering,8
+https://openalex.org/A5078143992,M. Farza,Abroad,École Nationale Supérieure d'Ingénieurs de Caen,FR,30,3297,165,Control theory (sociology) | Computer science | Physics | Control (management) | Artificial intelligence,8
+https://openalex.org/A5025959985,Mouldi Bedda,Abroad,Al Jouf University,SA,12,638,65,Computer science | Speech recognition | Artificial intelligence | Pattern recognition (psychology) | Philosophy,8
+https://openalex.org/A5004596965,Alban Kuriqi,Abroad,University of Lisbon,PT,49,8426,212,Environmental science | Geotechnical engineering | Geology | Computer science | Biology,8
+https://openalex.org/A5088796666,Damien Trentesaux,Abroad,Université Polytechnique Hauts-de-France,FR,44,6716,360,Computer science | Artificial intelligence | Business | Engineering | Mathematics,8
+https://openalex.org/A5071383873,Pascal Lorenz,Abroad,Université de Haute-Alsace,FR,37,6441,547,Computer science | Computer network | Telecommunications | Distributed computing | Wireless,8
+https://openalex.org/A5083849701,Celso Augusto Guimarães Santos,Abroad,Universidade Federal da Paraíba,BR,42,6618,315,Environmental science | Geology | Geography | Ecology | Biology,8
+https://openalex.org/A5064607546,Ahmad S. Darwish,Abroad,Khalifa University of Science and Technology,AE,30,2370,44,Chemistry | Eutectic system | Materials science | Organic chemistry | Engineering,8
+https://openalex.org/A5031696569,Farid Nouioua,Abroad,Centre National de la Recherche Scientifique,FR,14,737,82,Computer science | Mathematics | Artificial intelligence | Philosophy | Physics,8
+https://openalex.org/A5003417758,Shadi Atalla,Abroad,University of Dubai,AE,22,2064,168,Computer science | Artificial intelligence | Machine learning | Mathematics | Engineering,8
+https://openalex.org/A5014958087,Ubaid M. Al‐Saggaf,Abroad,,,27,2366,151,Computer science | Artificial intelligence | Mathematics | Engineering | Physics,8
+https://openalex.org/A5103641724,Abdellatif Ennaji,Abroad,"Laboratoire d'Informatique, du Traitement de l'Information et des Systèmes",FR,10,303,24,Computer science | Artificial intelligence | Pattern recognition (psychology) | Philosophy | Linguistics,8
+https://openalex.org/A5108085596,Abdelmadjid Bouabdallah,Abroad,Université de Technologie de Compiègne,FR,26,3751,206,Computer science | Computer network | Computer security | Distributed computing | Telecommunications,8
+https://openalex.org/A5015410834,Mohamed Cheriet,Abroad,Université du Québec à Montréal,CA,49,10763,710,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer network | Mathematics,8
+https://openalex.org/A5112274422,M. Y. Ayad,Abroad,Université de technologie de belfort-montbéliard,FR,17,1066,73,Computer science | Engineering | Electrical engineering | Physics | Quantum mechanics,8
+https://openalex.org/A5013799481,Didier Schwab,Abroad,Laboratoire d'Informatique de Grenoble,FR,16,969,243,Computer science | Natural language processing | Philosophy | Artificial intelligence | Linguistics,8
+https://openalex.org/A5048280041,Karim Abed‐Meraim,Abroad,Télécom Paris,FR,40,8998,586,Computer science | Algorithm | Mathematics | Artificial intelligence | Telecommunications,8
+https://openalex.org/A5002075376,Miloud Bagaa,Abroad,Université du Québec à Trois-Rivières,CA,40,5175,196,Computer science | Computer network | Distributed computing | Telecommunications | Operating system,8
+https://openalex.org/A5091763734,Abderrezak Rachedi,Abroad,Université Gustave Eiffel,FR,31,4329,214,Computer science | Computer network | Wireless | Telecommunications | Engineering,8
+https://openalex.org/A5088884307,Abdelghani Chibani,Abroad,Paris-Est Sup,FR,21,1804,212,Computer science | Context (archaeology) | Artificial intelligence | Human–computer interaction | Philosophy,8
+https://openalex.org/A5110190476,Stuart H. Rubin,Abroad,Naval Information Warfare Center Pacific,US,13,1499,230,Computer science | Programming language | Artificial intelligence | Mathematics | Engineering,8
+https://openalex.org/A5045468192,Iqbal M. Batiha,Abroad,Ajman University,AE,21,1472,189,Mathematics | Computer science | Applied mathematics | Mathematical analysis | Physics,8
+https://openalex.org/A5064214996,Dominique Beaini,Abroad,Polytechnique Montréal,CA,13,1259,57,Computer science | Artificial intelligence | Graph | Theoretical computer science | Mathematics,8
+https://openalex.org/A5010651448,N. Bouarissa,Abroad,King Khalid University,SA,50,7576,443,Chemistry | Materials science | Physics | Condensed matter physics | Quantum mechanics,8
+https://openalex.org/A5084412445,Souham Meshoul,Abroad,Princess Nourah bint Abdulrahman University,SA,20,1163,126,Computer science | Artificial intelligence | Machine learning | Data mining | Mathematics,8
+https://openalex.org/A5018844842,Mohammed Al-Sarem,Abroad,Yemenia University,YE,29,2639,108,Computer science | Artificial intelligence | Machine learning | World Wide Web | Philosophy,8
+https://openalex.org/A5045704925,Samir Ouchani,Abroad,Centre d'Etudes Superieures Industrielles,FR,17,1122,121,Computer science | Computer security | Programming language | Artificial intelligence | Operating system,8
+https://openalex.org/A5103870992,Omar Boussaïd,Abroad,Université Lumière Lyon 2,FR,8,200,26,Computer science | Social media | Data science | World Wide Web | Data mining,8
+https://openalex.org/A5009984886,Nassim Dennouni,Abroad,Laboratoire d'Informatique Fondamentale de Lille,FR,3,35,27,Computer science | World Wide Web | Artificial intelligence | Data science | Mathematics,8
+https://openalex.org/A5033485939,Djelloul Ziadi,Abroad,"Laboratoire d'Informatique, du Traitement de l'Information et des Systèmes",FR,14,630,87,Computer science | Automaton | Mathematics | Algorithm | Theoretical computer science,8
+https://openalex.org/A5118874170,Ahmed Noui,Abroad,University of Bari Aldo Moro,IT,0,0,49,Political science | Business | Law | Public administration | Citation,8
+https://openalex.org/A5029814958,Binh Thai Pham,Abroad,University Of Transport Technology,VN,95,27841,330,Computer science | Machine learning | Artificial intelligence | Statistics | Mathematics,7
+https://openalex.org/A5028386277,Thierry‐Marie Guerra,Abroad,Université Polytechnique Hauts-de-France,FR,50,9824,353,Control theory (sociology) | Computer science | Control (management) | Physics | Artificial intelligence,7
+https://openalex.org/A5111385859,M. M’Saad,Abroad,Université de Caen Normandie,FR,27,2881,202,Control theory (sociology) | Computer science | Engineering | Control (management) | Artificial intelligence,7
+https://openalex.org/A5044989257,Abdelghani Bekrar,Abroad,Université Polytechnique Hauts-de-France,FR,25,2642,146,Computer science | Mathematical optimization | Artificial intelligence | Engineering | Mathematics,7
+https://openalex.org/A5003808971,Zeina Al Masry,Abroad,Centre National de la Recherche Scientifique,FR,13,851,78,Computer science | Mathematics | Medicine | Artificial intelligence | Engineering,7
+https://openalex.org/A5023403556,Laith Abualigah,Abroad,Amman Arab University,JO,83,39504,787,Computer science | Mathematics | Artificial intelligence | Algorithm | Mathematical optimization,7
+https://openalex.org/A5025512804,Hazem Nounou,Abroad,Texas A&M University at Qatar,QA,36,4822,311,Mathematics | Computer science | Artificial intelligence | Statistics | Engineering,7
+https://openalex.org/A5038126464,Abdelhak Mourad Gueroui,Abroad,Université Paris-Saclay,FR,21,1718,78,Computer science | Computer network | Distributed computing | Wireless | Telecommunications,7
+https://openalex.org/A5016823513,Mohamed Machmoum,Abroad,Laboratoire de Génie des Procédés – Environnement – Agro-alimentaire,FR,28,3189,243,Physics | Computer science | Electrical engineering | Engineering | Artificial intelligence,7
+https://openalex.org/A5067706086,Mohamed Djemaï,Abroad,"Laboratoire d'Automatique, de Mécanique et d'Informatique Industrielles et Humaines",FR,32,3859,311,Control theory (sociology) | Computer science | Physics | Control (management) | Artificial intelligence,7
+https://openalex.org/A5033623398,Ahmed Bouridane,Abroad,University of Sharjah,AE,43,8541,594,Computer science | Artificial intelligence | Pattern recognition (psychology) | Computer vision | Mathematics,7
+https://openalex.org/A5059307073,A. Derdour,Abroad,Northwest African American Museum,US,30,2439,196,Chemistry | Materials science | Crystallography | Organic chemistry | Crystal structure,7
+https://openalex.org/A5072225338,Asier Ibeas,Abroad,Universitat Autònoma de Barcelona,ES,32,3155,283,Mathematics | Computer science | Control theory (sociology) | Control (management) | Artificial intelligence,7
+https://openalex.org/A5054980541,Nassim Rizoug,Abroad,École Supérieure des Techniques Aéronautiques et de Construction Automobile,FR,20,1481,121,Physics | Computer science | Power (physics) | Engineering | Quantum mechanics,7
+https://openalex.org/A5044453604,Yacine Amirat,Abroad,Paris-Est Sup,FR,29,3461,255,Computer science | Artificial intelligence | Engineering | Medicine | Physics,7
+https://openalex.org/A5074534697,Nehal Elshaboury,Abroad,Housing and Building National Research Center,EG,20,1390,113,Computer science | Machine learning | Artificial intelligence | Engineering | Mathematics,7
+https://openalex.org/A5035009771,A. Tounzi,Abroad,Laboratoire d'Électrotechnique et d'Électronique de Puissance de Lille,FR,19,1344,154,Computer science | Physics | Electrical engineering | Engineering | Quantum mechanics,7
+https://openalex.org/A5025108500,Elhocine Boutellaa,Abroad,,,16,661,58,Computer science | Artificial intelligence | Pattern recognition (psychology) | Face (sociological concept) | Sociology,7
+https://openalex.org/A5047866496,AbdulMalik S. Al‐Salman,Abroad,King Saud University,SA,25,3018,125,Computer science | Arabic | Artificial intelligence | Linguistics | Philosophy,7
+https://openalex.org/A5054713356,Ibraheem Shayea,Abroad,Istanbul Technical University,TR,38,4491,227,Computer science | Artificial intelligence | Computer network | Wireless | Telecommunications,7
+https://openalex.org/A5061965262,Lynda Mokdad,Abroad,Paris-Est Sup,FR,22,2056,242,Computer science | Computer network | Distributed computing | Wireless | Telecommunications,7
+https://openalex.org/A5011551284,Mostefa Bourchak,Abroad,King Abdulaziz University,SA,30,2513,94,Materials science | Ultimate tensile strength | Composite material | Composite number | Engineering,7
+https://openalex.org/A5077093273,Djamal Benslimane,Abroad,Université Claude Bernard Lyon 1,FR,23,2801,323,Computer science | Web service | World Wide Web | Programming language | Artificial intelligence,7
+https://openalex.org/A5111943854,Slimane Hammoudi,Abroad,École Supérieure d'Électronique de l'Ouest,FR,15,797,122,Computer science | Artificial intelligence | Programming language | Software engineering | Engineering,7
+https://openalex.org/A5100779407,Zhiyi Li,Abroad,Graphcore (United Kingdom),GB,23,1671,166,Materials science | Chemistry | Engineering | Organic chemistry | Physics,7
+https://openalex.org/A5052841916,Ali Parviz,Abroad,New Jersey Institute of Technology,US,3,44,19,Computer science | Machine learning | Artificial intelligence | Geography | Cartography,7
+https://openalex.org/A5076444645,Jama Hussein Mohamud,Abroad,,,3,23,12,Computer science | Task (project management) | Scale (ratio) | Artificial intelligence | Geography,7
+https://openalex.org/A5069121941,Abdennour Boulesnane,Abroad,,,8,91,23,Computer science | Natural language processing | Artificial intelligence | Linguistics | Philosophy,7
+https://openalex.org/A5074730004,Didier Raoult,Abroad,Aix-Marseille Université,FR,198,224949,4034,Medicine | Biology | Microbiology | Virology | Genetics,7
+https://openalex.org/A5061281389,Philippe Parola,Abroad,Aix-Marseille Université,FR,85,38300,901,Medicine | Biology | Virology | Internal medicine | Immunology,7
+https://openalex.org/A5066189034,Saâdi Boudjit,Abroad,Université Sorbonne Paris Nord,FR,15,676,88,Computer science | Computer network | Wireless | Distributed computing | Telecommunications,7
+https://openalex.org/A5073170321,Khaled Mohamed Khedher,Abroad,,,38,4748,188,Mathematics | Environmental science | Computer science | Geology | Biology,6
+https://openalex.org/A5038855458,Abu Reza Md. Towfiqul Islam,Abroad,Begum Rokeya University,BD,73,19897,603,Geology | Environmental science | Geography | Biology | Ecology,6
+https://openalex.org/A5088638819,M. A. Abido,Abroad,King Fahd University of Petroleum and Minerals,SA,65,20044,578,Computer science | Artificial intelligence | Engineering | Physics | Quantum mechanics,6
+https://openalex.org/A5086430193,Saïd Mahmoudi,Abroad,University of Mons,BE,32,3307,374,Computer science | Artificial intelligence | Medicine | Pattern recognition (psychology) | Political science,6
+https://openalex.org/A5056436780,Essam H. Houssein,Abroad,Minia University,EG,68,17362,329,Computer science | Artificial intelligence | Mathematical optimization | Algorithm | Mathematics,6
+https://openalex.org/A5081409903,Sofiane Kichou,Abroad,Czech Technical University in Prague,CZ,16,936,31,Photovoltaic system | Computer science | Electrical engineering | Engineering | Physics,6
+https://openalex.org/A5074558033,Juan J. Nieto,Abroad,Universidade de Santiago de Compostela,ES,79,24748,725,Mathematics | Computer science | Physics | Mathematical analysis | Applied mathematics,6
+https://openalex.org/A5056444635,Mohamed Nounou,Abroad,Texas A&M University at Qatar,QA,36,4695,299,Computer science | Mathematics | Artificial intelligence | Statistics | Engineering,6
+https://openalex.org/A5091727866,Saad Motahhir,Abroad,Sidi Mohamed Ben Abdellah University,MA,38,4498,182,Computer science | Photovoltaic system | Physics | Electrical engineering | Engineering,6
+https://openalex.org/A5100620829,Muhammed A. Hassan,Abroad,Cairo University,EG,31,2765,109,Computer science | Environmental science | Engineering | Electrical engineering | Physics,6

@@ -1,7 +1,26 @@
 __pycache__/
 *.pyc
+*.pyo
 .env
 node_modules/
+
+# pip cache
+.pip_cache/
+
+# Database files (keep only main db)
+dzresearchhh.db
+
+# VS Code history
+.history/
+
+# Data files (large / generated)
 data/raw/
 data/processed/
+data/*.npy
+data/arxiv_papers_expanded.csv
+data/author_papers_linked.csv
+data/researchers (1).csv
+data/papers (1).csv
+
+# Pickles
 *.pkl
