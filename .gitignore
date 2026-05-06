@@ -17,10 +17,13 @@ dzresearchhh.db
 data/raw/
 data/processed/
 data/*.npy
+
+# Raw / superseded data files (use consolidated_* instead)
 data/arxiv_papers_expanded.csv
 data/author_papers_linked.csv
-data/researchers (1).csv
-data/papers (1).csv
+data/researchers_enriched.csv
+"data/researchers (1).csv"
+"data/papers (1).csv"
 
 # Pickles
 *.pkl
