@@ -1,0 +1,285 @@
+/* ── Page wrapper ───────────────────────────── */
+.pp {
+  min-height: 100vh;
+  background: var(--off-white);
+  font-family: var(--font-body);
+}
+
+/* ── Hero ─────────────────────────────────────── */
+.pp-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 60px 40px 48px;
+  position: relative;
+  margin-top: 2%;
+}
+.pp-hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(245,166,35,0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+.pp-hero__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Back + content row ───────────────────────── */
+.pp-hero__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.pp-hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  padding-top: 0;
+}
+.pp-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+.pp-back:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.pp-hero__right { flex: 1; }
+
+/* ── Hero content ─────────────────────────────── */
+.pp-hero__icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pp-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+.pp-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.pp-hero__meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pp-hero__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Tags ─────────────────────────────────────── */
+.pp-tag {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.pp-tag:hover {
+  background: rgba(245,166,35,0.2);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── Body ─────────────────────────────────────── */
+.pp-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+
+/* ── Section ─────────────────────────────────── */
+.pp-section { margin-bottom: 40px; }
+.pp-section__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Authors ─────────────────────────────────── */
+.pp-authors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pp-author-chip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.pp-author-chip:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.1);
+}
+
+/* ── Abstract ────────────────────────────────── */
+.pp-abstract {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+.pp-abstract:hover { border-color: var(--gold); }
+.pp-abstract p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Details ─────────────────────────────────── */
+.pp-details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.pp-details:hover { border-color: var(--gold); }
+.pp-detail {
+  padding: 24px;
+  border-right: 1px solid var(--border);
+}
+.pp-detail:last-child { border-right: none; }
+.pp-detail__icon { color: var(--gold); display: block; margin-bottom: 8px; }
+.pp-detail__label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 4px;
+}
+.pp-detail__value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* ── Similar Papers ──────────────────────────── */
+.pp-similar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pp-similar__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pp-similar__card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.08);
+}
+.pp-similar__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.pp-similar__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.4;
+}
+.pp-similar__ext {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 2px;
+  transition: color 0.15s;
+}
+.pp-similar__ext:hover { color: var(--gold); }
+.pp-similar__authors {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+.pp-similar__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.pp-similar__footer span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pp-year-badge {
+  background: var(--gold-dim);
+  color: var(--gold);
+  border: 1px solid rgba(245,166,35,0.3);
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  .pp-hero { padding: 32px 20px; }
+  .pp-hero__row { flex-direction: column; gap: 16px; }
+  .pp-body { padding: 24px 20px 60px; }
+  .pp-details { grid-template-columns: 1fr; }
+  .pp-detail { border-right: none; border-bottom: 1px solid var(--border); }
+  .pp-detail:last-child { border-bottom: none; }
+}
