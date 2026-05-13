@@ -1,0 +1,12 @@
+sentence-transformers
+scikit-learn
+fastapi
+uvicorn[standard]
+pandas
+numpy
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+email-validator
+python-dotenv
+python-multipart
