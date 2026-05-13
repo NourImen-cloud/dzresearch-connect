@@ -1,14 +1,126 @@
-What is DZ Research Connect?
-DZ Research Connect is a web platform built to bring together Algerian computer science researchers and their published work in one searchable place. Think of it as a national research directory where anyone can find a researcher, explore their publications, and see how they connect with other scholars in the field.
+# DZ Research Connect
 
-Who is it for?
-The platform serves three main groups. General visitors can search and browse researcher profiles and publications without needing an account. Researchers can register, create a profile, and link their academic identity to an internationally recognized ID called OpenAlex. Administrators manage the data behind the scenes — keeping information up to date and making sure automated features like weekly digest emails keep running smoothly.
+## What is DZ Research Connect?
 
-How is it built?
-The platform has two main parts. The backend is built with FastAPI, a modern Python web framework, and stores all data in a SQLite database. Researcher and publication data is loaded from spreadsheets (CSV files) when the application first starts up. The frontend is a React application that users interact with directly in their browser.
-On top of that, there is an optional AI layer powered by machine learning models. This layer analyzes researcher profiles and publications to find meaningful similarities between researchers — even if they have never collaborated directly — and powers a semantic search feature that understands the meaning behind a query, not just the exact words typed.
+DZ Research Connect is a web platform designed to bring together Algerian computer science researchers and their published work in one searchable place. It acts as a national research directory where users can discover researchers, explore their publications, and understand connections between scholars across the field.
 
-Key features
-Users can search for researchers by name, topic, or location. Each researcher has a profile page showing their publications, citation count, and h-index. Registered researchers can claim their profile and edit their bio, website, and areas of specialty.
-The platform also generates two types of visual network graphs. The first is a co-authorship graph that shows researchers who have published papers together. The second is a similarity network that connects researchers whose work is semantically related, based on the AI analysis.
-Logged-in users can save their search filters for later, and can subscribe to weekly digest emails that summarize new researchers or publications matching their interests.
+---
+
+## Who is it for?
+
+The platform serves three main types of users:
+
+### General Visitors
+Visitors can freely search and browse researcher profiles and publications without creating an account.
+
+### Researchers
+Researchers can register on the platform, claim or create their profile, and connect their academic identity using an internationally recognized researcher identifier called **OpenAlex**.
+
+### Administrators
+Administrators manage the platform data and ensure the smooth operation of automated services such as weekly digest emails and data updates.
+
+---
+
+## System Architecture
+
+DZ Research Connect is composed of two main parts:
+
+### Backend
+The backend is built using **FastAPI**, a modern Python web framework.  
+All application data is stored in a **SQLite** database.
+
+Researcher and publication information is initially imported from **CSV files** during application startup.
+
+### Frontend
+The frontend is developed with **React**, providing users with an interactive and responsive web interface.
+
+---
+
+## AI-Powered Features
+
+The platform optionally integrates machine learning models to provide advanced research discovery features.
+
+The AI layer analyzes researcher profiles and publications to:
+
+- Detect semantic similarities between researchers
+- Recommend related researchers
+- Enable semantic search capabilities
+
+Unlike traditional keyword search, semantic search understands the meaning and context behind a user's query.
+
+---
+
+## Key Features
+
+### Researcher Search
+Users can search researchers by:
+
+- Name
+- Research topic
+- Location
+
+### Researcher Profiles
+Each researcher profile includes:
+
+- Publications
+- Citation count
+- h-index
+- Biography
+- Website
+- Research specialties
+
+### Profile Claiming
+Registered researchers can claim and manage their own profiles.
+
+### Network Visualization
+The platform generates two types of research networks:
+
+#### Co-authorship Network
+Displays researchers who have collaborated on publications together.
+
+#### Similarity Network
+Connects researchers whose work is semantically related based on AI analysis.
+
+### Saved Searches
+Authenticated users can save search filters and preferences for future use.
+
+### Weekly Digest Emails
+Users can subscribe to automated weekly digest emails summarizing:
+
+- Newly added researchers
+- Recent publications
+- Updates matching their interests
+
+---
+
+## Technologies Used
+
+### Backend
+- FastAPI
+- Python
+- SQLite
+
+### Frontend
+- React
+
+### Data Processing
+- CSV-based data import
+- Machine Learning / NLP models
+
+---
+
+## Future Improvements
+
+Potential future enhancements include:
+
+- Integration with additional academic databases
+- Advanced analytics dashboards
+- Research collaboration recommendations
+- Real-time publication updates
+- Institution-level statistics and insights
+
+---
+
+## Goal of the Platform
+
+The main goal of DZ Research Connect is to improve visibility, accessibility, and collaboration within the Algerian computer science research community by centralizing academic information into one intelligent and easy-to-use platform.
