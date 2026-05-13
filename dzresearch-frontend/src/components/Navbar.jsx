@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const { isAuthenticated, email, logout } = useAuth()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -52,6 +54,57 @@ export default function Navbar() {
               Search
             </Link>
           </li>
+          <li>
+            <Link
+              to="/graph-demo"
+              className={`navbar__link ${location.pathname === '/graph-demo' ? 'navbar__link--active' : ''}`}
+              title="AI view: researchers who look similar on paper (not who wrote together)"
+            >
+              Similarity map
+            </Link>
+          </li>
+          {!isAuthenticated ? (
+            <>
+              <li>
+                <Link
+                  to="/login"
+                  className={`navbar__link ${location.pathname === '/login' ? 'navbar__link--active' : ''}`}
+                >
+                  Log in
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/register"
+                  className={`navbar__link navbar__link--cta ${location.pathname === '/register' ? 'navbar__link--active' : ''}`}
+                >
+                  Sign up
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link
+                  to="/account/digests"
+                  className={`navbar__link ${location.pathname === '/account/digests' ? 'navbar__link--active' : ''}`}
+                  title="Weekly email: papers and researchers from our catalog matching your saved filters"
+                >
+                  Email digest
+                </Link>
+              </li>
+              <li>
+                <span className="navbar__user" title={email}>
+                  {email}
+                </span>
+              </li>
+              <li>
+                <button type="button" className="navbar__link" onClick={logout}>
+                  Log out
+                </button>
+              </li>
+            </>
+          )}
         </ul>
 
       </div>

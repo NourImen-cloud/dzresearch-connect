@@ -25,9 +25,14 @@ def list_profiles(
     query = db.query(ResearcherProfile)
     if q:
         like = f"%{q.lower()}%"
-        query = query.filter(ResearcherProfile.name.ilike(like))
+        query = query.filter(
+            ResearcherProfile.name.ilike(like)
+            | ResearcherProfile.topics.ilike(like)
+            | ResearcherProfile.institution.ilike(like)
+            | ResearcherProfile.specialty.ilike(like)
+        )
     if location:
-        query = query.filter(ResearcherProfile.location.ilike(location))
+        query = query.filter(ResearcherProfile.location.ilike(f"%{location}%"))
     if claimed is not None:
         query = query.filter(ResearcherProfile.is_claimed == claimed)
     return query.limit(300).all()
@@ -58,6 +63,10 @@ def update_profile(
         profile.bio = payload.bio
     if payload.specialty is not None:
         profile.specialty = payload.specialty
+    if payload.website is not None:
+        profile.website = payload.website.strip()[:500]
+    if payload.orcid is not None:
+        profile.orcid = payload.orcid.strip()[:80]
     profile.updated_at = datetime.utcnow()
     db.commit()
     db.refresh(profile)
@@ -79,6 +88,8 @@ def claim_profile(
     profile.is_claimed = True
     profile.claimed_by_user_id = current_user.id
     profile.updated_at = datetime.utcnow()
+    current_user.linked_researcher_id = payload.researcher_id
+    current_user.profile_listing_pending = False
     db.commit()
     db.refresh(profile)
     return profile

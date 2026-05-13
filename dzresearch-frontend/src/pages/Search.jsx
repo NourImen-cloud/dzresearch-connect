@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import SearchBar from '../components/Searchbar'
-import { searchAll } from '../services/api'
+import { searchAll, listSavedSearches, createSavedSearch, deleteSavedSearch } from '../services/api'
+import { useAuth } from '../context/AuthContext'
 import './Search.css'
 
 const SORT_OPTIONS = ['Relevance', 'Most Recent', 'Most Citations']
@@ -9,6 +10,7 @@ const SORT_OPTIONS = ['Relevance', 'Most Recent', 'Most Citations']
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
   const initialQuery = searchParams.get('q') || ''
+  const { token, isAuthenticated } = useAuth()
 
   const [filters,  setFilters]  = useState({
     query:   initialQuery,
@@ -21,8 +23,23 @@ export default function Search() {
   const [loading,  setLoading]  = useState(false)
   const [error,    setError]    = useState(null)
   const [visibleN, setVisibleN] = useState(6)
+  const [savedList, setSavedList] = useState([])
+  const [saveName, setSaveName] = useState('')
+  const [saveMsg, setSaveMsg] = useState('')
 
-  // Fetch from real API whenever filters change
+  const loadSaved = useCallback(() => {
+    if (!token) {
+      setSavedList([])
+      return
+    }
+    listSavedSearches(token)
+      .then(setSavedList)
+      .catch(() => setSavedList([]))
+  }, [token])
+
+  useEffect(() => {
+    loadSaved()
+  }, [loadSaved])
   const fetchResults = useCallback(async () => {
     setLoading(true)
     setError(null)
@@ -67,6 +84,45 @@ export default function Search() {
     setFilters(prev => ({ ...prev, [key]: resetValue }))
   }
 
+  function applySavedSearch(s) {
+    setFilters({
+      query: s.query || '',
+      country: s.country || 'All Countries',
+      type: s.result_type || 'All',
+      topic: s.topic || 'All Topics',
+    })
+    if (s.query) setSearchParams({ q: s.query })
+    else setSearchParams({})
+  }
+
+  async function handleSaveSearch(e) {
+    e.preventDefault()
+    if (!token || !saveName.trim()) return
+    setSaveMsg('')
+    try {
+      await createSavedSearch(token, {
+        name: saveName.trim(),
+        query: filters.query || '',
+        country: filters.country,
+        result_type: filters.type,
+        topic: filters.topic,
+      })
+      setSaveName('')
+      setSaveMsg('Saved.')
+      loadSaved()
+    } catch (ex) {
+      setSaveMsg(ex.message || 'Could not save')
+    }
+  }
+
+  async function handleDeleteSaved(id) {
+    if (!token) return
+    try {
+      await deleteSavedSearch(token, id)
+      loadSaved()
+    } catch { /* ignore */ }
+  }
+
   const activeChips = [
     filters.country !== 'All Countries' && { label: filters.country, key: 'country', reset: 'All Countries' },
     filters.type    !== 'All'           && { label: filters.type,    key: 'type',    reset: 'All'           },
@@ -97,8 +153,50 @@ export default function Search() {
 
       {/* ── RESULTS BODY ─────────────────────────── */}
       <div className="sp-body">
+        <div className={`sp-layout ${isAuthenticated && token ? 'sp-layout--with-saved' : ''}`}>
+          {isAuthenticated && token && (
+            <aside className="sp-saved" aria-label="Saved searches">
+              <h2 className="sp-saved__title">Saved searches</h2>
+              <p className="sp-saved__hint">
+                Save the current filters under a name, then click a name to restore them. (Different from{' '}
+                <strong>Email digest</strong> in the menu — that emails catalog matches weekly.)
+              </p>
+              <form className="sp-saved__form" onSubmit={handleSaveSearch}>
+                <input
+                  className="sp-saved__input"
+                  placeholder="Name (e.g. ML Algeria)"
+                  value={saveName}
+                  onChange={e => setSaveName(e.target.value)}
+                />
+                <button type="submit" className="sp-saved__save" disabled={!saveName.trim()}>
+                  Save current search
+                </button>
+              </form>
+              {saveMsg && <p className="sp-saved__msg">{saveMsg}</p>}
+              <ul className="sp-saved__list">
+                {savedList.length === 0 && (
+                  <li className="sp-saved__empty">No saved searches yet.</li>
+                )}
+                {savedList.map(s => (
+                  <li key={s.id} className="sp-saved__item">
+                    <button type="button" className="sp-saved__apply" onClick={() => applySavedSearch(s)}>
+                      {s.name}
+                    </button>
+                    <button
+                      type="button"
+                      className="sp-saved__del"
+                      aria-label={`Delete ${s.name}`}
+                      onClick={() => handleDeleteSaved(s.id)}
+                    >
+                      ×
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
 
-        {/* Active filter chips */}
+          <div className="sp-main">
         {activeChips.length > 0 && (
           <div className="sp-chips">
             {activeChips.map(c => (
@@ -181,24 +279,48 @@ export default function Search() {
             )}
           </>
         )}
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
+function profilePath(researcherId) {
+  return `/researcher/${encodeURIComponent(researcherId)}`
+}
+
+function paperPath(paperId) {
+  return `/paper/${encodeURIComponent(paperId)}`
+}
+
 /* ── Researcher card ─────────────────────────────────────── */
 function ResearcherCard({ data }) {
   const navigate = useNavigate()
+  const to = profilePath(data.id)
   return (
-    <article className="rc" onClick={() => navigate(`/researcher/${data.id}`)}>
+    <article
+      className="rc"
+      role="link"
+      tabIndex={0}
+      onClick={() => navigate(to)}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          navigate(to)
+        }
+      }}
+      aria-label={`Open full profile for ${data.name}`}
+    >
       <div className="rc__img-wrap">
         {data.image
-          ? <img src={data.image} alt={data.name} className="rc__img" loading="lazy" />
+          ? <img src={data.image} alt="" className="rc__img" loading="lazy" />
           : <div className="rc__img-placeholder"><PersonIcon /></div>
         }
-        <span className="rc__score">{data.score}%</span>
+        {data.score != null && <span className="rc__score">{data.score}%</span>}
       </div>
       <div className="rc__body">
+        <p className="rc__preview-label">Search preview — not the full profile</p>
         <h3 className="rc__name">{data.name}</h3>
         <p className="rc__inst"><LocationIcon /> {data.institution}</p>
         <div className="rc__topics">
@@ -209,18 +331,35 @@ function ResearcherCard({ data }) {
         <span><PaperSmIcon /> {data.papers} papers</span>
         <span><LocationIcon /> {data.location}</span>
       </div>
+      <div className="rc__cta">
+        <span className="rc__cta-text">Open full profile</span>
+        <span className="rc__cta-hint">Publications, co-authors, similar researchers</span>
+      </div>
     </article>
   )
 }
 
 /* ── Paper card ──────────────────────────────────────────── */
 function PaperCard({ data }) {
-   const navigate = useNavigate()
+  const navigate = useNavigate()
+  const to = paperPath(data.id)
   return (
-    <article className="pc" onClick={() => navigate(`/paper/${data.id}`)}>
+    <article
+      className="pc"
+      role="link"
+      tabIndex={0}
+      onClick={() => navigate(to)}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          navigate(to)
+        }
+      }}
+      aria-label={`Open paper ${data.title}`}
+    >
       <div className="pc__img-wrap">
         <PaperBigIcon />
-        <span className="rc__score">{data.score}%</span>
+        {data.score != null && <span className="rc__score">{data.score}%</span>}
       </div>
       <div className="rc__body">
         <h3 className="pc__title">{data.title}</h3>
@@ -233,6 +372,9 @@ function PaperCard({ data }) {
       <div className="rc__footer">
         <span><CitationIcon /> {data.citations} citations</span>
         <span className="pc__type"><PaperSmIcon /> Paper</span>
+      </div>
+      <div className="rc__cta rc__cta--paper">
+        <span className="rc__cta-text">Open paper</span>
       </div>
     </article>
   )

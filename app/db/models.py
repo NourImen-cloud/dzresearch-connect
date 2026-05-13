@@ -16,6 +16,8 @@ class User(Base):
     email = Column(String(200), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
     role = Column(String(50), default="researcher", nullable=False)
+    linked_researcher_id = Column(String(200), nullable=True)
+    profile_listing_pending = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
 
@@ -33,6 +35,8 @@ class ResearcherProfile(Base):
     topics = Column(Text, default="")
     bio = Column(Text, default="")
     specialty = Column(String(300), default="")
+    website = Column(String(500), default="", nullable=False)
+    orcid = Column(String(80), default="", nullable=False)
     is_claimed = Column(Boolean, default=False, nullable=False)
     claimed_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
@@ -71,3 +75,32 @@ class ResearcherPaper(Base):
     id = Column(Integer, primary_key=True, index=True)
     researcher_id = Column(String(200), ForeignKey("researcher_profiles.id"), nullable=False)
     paper_id = Column(String(200), ForeignKey("papers.id"), nullable=False)
+
+
+class SavedSearch(Base):
+    __tablename__ = "saved_searches"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    name = Column(String(200), nullable=False)
+    query = Column(String(500), default="", nullable=False)
+    country = Column(String(120), default="All Countries", nullable=False)
+    result_type = Column(String(80), default="All", nullable=False)
+    topic = Column(String(200), default="All Topics", nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+
+
+class DigestSubscription(Base):
+    __tablename__ = "digest_subscriptions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), unique=True, nullable=False, index=True)
+    enabled = Column(Boolean, default=False, nullable=False)
+    frequency = Column(String(20), default="weekly", nullable=False)
+    query = Column(String(500), default="", nullable=False)
+    country = Column(String(120), default="All Countries", nullable=False)
+    result_type = Column(String(80), default="All", nullable=False)
+    topic = Column(String(200), default="All Topics", nullable=False)
+    last_sent_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, nullable=False)

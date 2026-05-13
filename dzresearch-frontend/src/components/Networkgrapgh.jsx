@@ -18,7 +18,7 @@
  *     researcherId={researcher.id}
  *     nodes={GRAPH_NODES}
  *     edges={GRAPH_EDGES}
- *     onNodeClick={(id) => navigate(`/researcher/${id}`)}
+ *     onNodeClick={(id) => navigate(`/researcher/${encodeURIComponent(id)}`)}
  *   />
  */
 
@@ -51,6 +51,8 @@ export default function NetworkGraph({
   edges = [],
   height = 380,
   onNodeClick,
+  graphTitle = 'Co-author network',
+  graphSubtitle,
 }) {
   const svgRef     = useRef(null)
   const navigate   = useNavigate()
@@ -209,7 +211,7 @@ export default function NetworkGraph({
       .on('click', (event, d) => {
         if (d.id === researcherId) return
         if (onNodeClick) onNodeClick(d.id)
-        else navigate(`/researcher/${d.id}`)
+        else navigate(`/researcher/${encodeURIComponent(d.id)}`)
       })
 
     // ── Tick ──────────────────────────────────────────────
@@ -240,12 +242,13 @@ export default function NetworkGraph({
       {/* ── Header ─────────────────────────────── */}
       <div className="ng__header">
         <div className="ng__header-left">
-          <h3 className="ng__title">Collaboration Network</h3>
+          <h3 className="ng__title">{graphTitle}</h3>
           <p className="ng__subtitle">
-            {neighborCount > 0
-              ? `${neighborCount} direct co-author${neighborCount !== 1 ? 's' : ''}`
-              : 'No co-authors found'
-            }
+            {graphSubtitle
+              ? graphSubtitle
+              : neighborCount > 0
+                ? `${neighborCount} direct co-author${neighborCount !== 1 ? 's' : ''}`
+                : 'No co-authors found'}
           </p>
         </div>
         <div className="ng__legend">
@@ -322,7 +325,11 @@ export default function NetworkGraph({
                   <button
                     key={n.id}
                     className={`ng__neighbor ${hoveredId === n.id ? 'ng__neighbor--hovered' : ''}`}
-                    onClick={() => onNodeClick ? onNodeClick(n.id) : navigate(`/researcher/${n.id}`)}
+                    onClick={() =>
+                      onNodeClick
+                        ? onNodeClick(n.id)
+                        : navigate(`/researcher/${encodeURIComponent(n.id)}`)
+                    }
                   >
                     <span
                       className="ng__neighbor-dot"

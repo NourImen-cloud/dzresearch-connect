@@ -1,11 +1,23 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { getResearcher, getResearcherPapers, getRecommendations } from '../services/api'
+import { useState, useEffect, useMemo } from 'react'
+import NetworkGraph from '../components/Networkgrapgh'
+import { useAuth } from '../context/AuthContext'
+import {
+  getResearcher,
+  getResearcherPapers,
+  getRecommendations,
+  getCollaborationEgo,
+  patchProfile,
+  normalizeResearcher,
+} from '../services/api'
 import './ResearcherProfile.css'
 
 export default function ResearcherProfile() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const { token, linkedResearcherId } = useAuth()
+  const decodedId = useMemo(() => (id ? decodeURIComponent(id) : ''), [id])
+
   const [activeTab, setActiveTab] = useState('overview')
 
   const [data,       setData]       = useState(null)
@@ -14,30 +26,117 @@ export default function ResearcherProfile() {
   const [loading,    setLoading]    = useState(true)
   const [error,      setError]      = useState(null)
 
+  const [collabNodes, setCollabNodes] = useState([])
+  const [collabEdges, setCollabEdges] = useState([])
+  const [collabLoading, setCollabLoading] = useState(false)
+  const [collabError, setCollabError] = useState(null)
+
+  const [editOpen, setEditOpen] = useState(false)
+  const [editForm, setEditForm] = useState({ bio: '', specialty: '', website: '', orcid: '' })
+  const [editSaving, setEditSaving] = useState(false)
+  const [editError, setEditError] = useState(null)
+
   useEffect(() => {
     if (!id) return
     setLoading(true)
     setError(null)
+    const decoded = decodeURIComponent(id)
+    let cancelled = false
 
-    // Decode the ID (URL-encoded OpenAlex IDs)
-    const decodedId = decodeURIComponent(id)
-
-    Promise.all([
-      getResearcher(decodedId),
-      getResearcherPapers(decodedId),
-      getRecommendations(decodedId, 6),
-    ])
-      .then(([profile, paps, recs]) => {
+    ;(async () => {
+      try {
+        const profile = await getResearcher(decoded)
+        if (cancelled) return
         setData(profile)
-        setPapers(paps)
-        setSimilar(recs)
-      })
-      .catch(err => setError(err.message))
-      .finally(() => setLoading(false))
+
+        const [paps, recs] = await Promise.all([
+          getResearcherPapers(decoded).catch(() => []),
+          getRecommendations(decoded, 6).catch(() => []),
+        ])
+        if (cancelled) return
+        setPapers(Array.isArray(paps) ? paps : [])
+        setSimilar(Array.isArray(recs) ? recs : [])
+      } catch (err) {
+        if (cancelled) return
+        setError(err.message || 'Could not load profile')
+        setData(null)
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
   }, [id])
+
+  useEffect(() => {
+    if (activeTab !== 'collaboration' || !decodedId) return
+    setCollabLoading(true)
+    setCollabError(null)
+    getCollaborationEgo(decodedId, 50)
+      .then(g => {
+        setCollabNodes(
+          (g.nodes || []).map(n => ({
+            id: n.id,
+            name: n.label,
+            location: n.location,
+            papers: n.papers,
+          }))
+        )
+        setCollabEdges(
+          (g.edges || []).map(e => ({
+            source: e.source,
+            target: e.target,
+            weight: e.weight,
+          }))
+        )
+      })
+      .catch(err => setCollabError(err.message))
+      .finally(() => setCollabLoading(false))
+  }, [activeTab, decodedId])
+
+  useEffect(() => {
+    if (!editOpen || !data) return
+    setEditForm({
+      bio: data.bio || '',
+      specialty: data.specialty || '',
+      website: data.website || '',
+      orcid: data.orcid || '',
+    })
+    setEditError(null)
+  }, [editOpen, data])
 
   if (loading) return <LoadingState />
   if (error)   return <ErrorState message={error} onBack={() => navigate(-1)} />
+
+  const canEdit = Boolean(
+    token &&
+      data?.isClaimed &&
+      linkedResearcherId &&
+      decodedId === linkedResearcherId
+  )
+
+  async function saveProfile(e) {
+    e.preventDefault()
+    if (!token || !decodedId) return
+    setEditSaving(true)
+    setEditError(null)
+    try {
+      const raw = await patchProfile(decodedId, token, {
+        bio: editForm.bio,
+        specialty: editForm.specialty,
+        website: editForm.website,
+        orcid: editForm.orcid,
+      })
+      setData(normalizeResearcher(raw))
+      setEditOpen(false)
+    } catch (err) {
+      setEditError(err.message)
+    } finally {
+      setEditSaving(false)
+    }
+  }
 
   return (
     <div className="rp">
@@ -62,7 +161,18 @@ export default function ResearcherProfile() {
                   <PersonIcon size={54} />
                 </div>
                 <div className="rp-hero__details">
-                  <h1 className="rp-hero__name">{data.name}</h1>
+                  <div className="rp-hero__title-row">
+                    <h1 className="rp-hero__name">{data.name}</h1>
+                    <span
+                      className={
+                        data.isClaimed
+                          ? 'rp-profile-badge rp-profile-badge--claimed'
+                          : 'rp-profile-badge rp-profile-badge--unclaimed'
+                      }
+                    >
+                      {data.isClaimed ? 'Claimed' : 'Unclaimed'}
+                    </span>
+                  </div>
                   <div className="rp-hero__meta">
                     <span><LocationIcon /> {data.institution}</span>
                     <span><LocationIcon /> {data.location}</span>
@@ -72,6 +182,62 @@ export default function ResearcherProfile() {
                   <div className="rp-hero__topics">
                     {data.topics.map(t => <span key={t} className="rp-tag">{t}</span>)}
                   </div>
+                  <div className="rp-hero__quick-nav">
+                    <button
+                      type="button"
+                      className="rp-hero__quick-btn"
+                      onClick={() => setActiveTab('overview')}
+                      aria-current={activeTab === 'overview' ? 'true' : undefined}
+                    >
+                      Overview
+                    </button>
+                    <button
+                      type="button"
+                      className="rp-hero__quick-btn"
+                      onClick={() => setActiveTab('publications')}
+                      aria-current={activeTab === 'publications' ? 'true' : undefined}
+                    >
+                      Publications
+                    </button>
+                    <button
+                      type="button"
+                      className="rp-hero__quick-btn rp-hero__quick-btn--accent"
+                      onClick={() => setActiveTab('collaboration')}
+                      title="Researchers who share papers with this person in our database"
+                      aria-current={activeTab === 'collaboration' ? 'true' : undefined}
+                    >
+                      Co-authors
+                    </button>
+                  </div>
+                  {(data.website || data.orcid || canEdit) && (
+                    <div className="rp-hero__links">
+                      {data.website && (
+                        <a
+                          className="rp-hero__link"
+                          href={data.website.startsWith('http') ? data.website : `https://${data.website}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Website
+                        </a>
+                      )}
+                      {data.orcid && (
+                        <a
+                          className="rp-hero__link"
+                          href={data.orcid.startsWith('http') ? data.orcid : `https://orcid.org/${data.orcid.replace(/^https?:\/\/orcid\.org\//, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          ORCID
+                        </a>
+                      )}
+                      {canEdit && (
+                        <button type="button" className="rp-edit-profile" onClick={() => setEditOpen(true)}>
+                          Edit profile
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -96,12 +262,27 @@ export default function ResearcherProfile() {
       <div className="rp-tabs">
         <button
           className={`rp-tab ${activeTab === 'overview' ? 'rp-tab--active' : ''}`}
+          type="button"
           onClick={() => setActiveTab('overview')}
-        >Overview</button>
+        >
+          <span className="rp-tab__line1">Overview</span>
+        </button>
         <button
           className={`rp-tab ${activeTab === 'publications' ? 'rp-tab--active' : ''}`}
+          type="button"
           onClick={() => setActiveTab('publications')}
-        >Publications ({papers.length})</button>
+        >
+          <span className="rp-tab__line1">Publications ({papers.length})</span>
+        </button>
+        <button
+          className={`rp-tab ${activeTab === 'collaboration' ? 'rp-tab--active' : ''}`}
+          type="button"
+          title="People who share at least one paper with this researcher in our database (real co-authorship)"
+          onClick={() => setActiveTab('collaboration')}
+        >
+          <span className="rp-tab__line1">Co-authors</span>
+          <span className="rp-tab__line2">shared papers</span>
+        </button>
       </div>
 
       {/* ── BODY ─────────────────────────── */}
@@ -109,8 +290,28 @@ export default function ResearcherProfile() {
 
         {activeTab === 'overview' && (
           <>
+            <div className="rp-feature-callout" role="region" aria-label="Co-authorship map">
+              <div className="rp-feature-callout__badge">Real collaborations</div>
+              <div className="rp-feature-callout__body">
+                <h3 className="rp-feature-callout__title">Who published with this researcher?</h3>
+                <p className="rp-feature-callout__text">
+                  The <strong>Co-authors</strong> tab builds a network from <strong>shared papers</strong> in the
+                  DZresearch catalog (same paper, two authors). That is different from the site-wide{' '}
+                  <strong>Similarity map</strong> in the menu, which uses AI to show who looks <em>similar</em> on
+                  profiles—not who wrote together.
+                </p>
+                <button
+                  type="button"
+                  className="rp-feature-callout__btn"
+                  onClick={() => setActiveTab('collaboration')}
+                >
+                  Open co-author map →
+                </button>
+              </div>
+            </div>
+
             {/* Bio / Specialty */}
-            {(data.bio || data.specialty) && (
+            {(data.bio || data.specialty || data.website || data.orcid) && (
               <div className="rp-section">
                 <h2>About</h2>
                 {data.specialty && <p><strong>Specialty:</strong> {data.specialty}</p>}
@@ -136,7 +337,13 @@ export default function ResearcherProfile() {
             <div className="rp-section">
               <h2>Similar Researchers</h2>
               {similar.length === 0
-                ? <p style={{color:'#94a3b8'}}>No recommendations available.</p>
+                ? (
+                  <p style={{ color: '#94a3b8' }}>
+                    No AI similarity list for this record (they may be in the database but not in the embedding
+                    index). The rest of the profile still loads. Use the menu <strong>Similarity map</strong> to explore
+                    the catalog or compare two IDs there.
+                  </p>
+                  )
                 : (
                   <div className="rp-similar">
                     {similar.map(r => (
@@ -174,7 +381,103 @@ export default function ResearcherProfile() {
           </div>
         )}
 
+        {activeTab === 'collaboration' && (
+          <div className="rp-section rp-collab">
+            <div className="rp-collab__header">
+              <h2>Co-authorship map</h2>
+              <p className="rp-collab__tagline">Based on papers we have in common — not AI “look-alikes”</p>
+            </div>
+            <p className="rp-collab__intro">
+              Each link is another researcher who appears on <strong>at least one</strong> of the same papers as this
+              profile. Thicker lines mean more shared publications. Click a node to open their profile.
+            </p>
+            {collabLoading && (
+              <p style={{ color: '#64748b' }}>Loading collaboration data…</p>
+            )}
+            {!collabLoading && collabError && (
+              <p className="rp-collab__error">{collabError}</p>
+            )}
+            {!collabLoading && !collabError && collabNodes.length <= 1 && (
+              <div className="rp-collab__empty">
+                <p><strong>No shared-paper links in this catalog yet.</strong></p>
+                <p>
+                  We only draw edges when another author appears on the same paper record in our database. If this
+                  researcher has co-authors in real life but they do not appear here, we may not have imported those
+                  papers or links yet.
+                </p>
+              </div>
+            )}
+            {!collabLoading && !collabError && collabNodes.length > 1 && (
+              <div className="rp-collab__graph">
+                <NetworkGraph
+                  researcherId={decodedId}
+                  nodes={collabNodes}
+                  edges={collabEdges}
+                  height={420}
+                  graphTitle="Shared-paper network"
+                  onNodeClick={nid => navigate(`/researcher/${encodeURIComponent(nid)}`)}
+                />
+              </div>
+            )}
+          </div>
+        )}
+
       </div>
+
+      {editOpen && (
+        <div className="rp-modal-backdrop" role="presentation" onClick={() => !editSaving && setEditOpen(false)}>
+          <div className="rp-modal" role="dialog" aria-labelledby="rp-edit-title" onClick={e => e.stopPropagation()}>
+            <h2 id="rp-edit-title">Edit your profile</h2>
+            <p className="rp-modal__hint">Only the fields below can be changed; bibliometric data stays synced from the catalog.</p>
+            {editError && <p className="rp-modal__error">{editError}</p>}
+            <form onSubmit={saveProfile}>
+              <label className="rp-modal__field">
+                <span>Specialty</span>
+                <input
+                  value={editForm.specialty}
+                  onChange={e => setEditForm(f => ({ ...f, specialty: e.target.value }))}
+                  maxLength={300}
+                />
+              </label>
+              <label className="rp-modal__field">
+                <span>Bio</span>
+                <textarea
+                  value={editForm.bio}
+                  onChange={e => setEditForm(f => ({ ...f, bio: e.target.value }))}
+                  rows={5}
+                  maxLength={2000}
+                />
+              </label>
+              <label className="rp-modal__field">
+                <span>Website</span>
+                <input
+                  value={editForm.website}
+                  onChange={e => setEditForm(f => ({ ...f, website: e.target.value }))}
+                  placeholder="https://…"
+                  maxLength={500}
+                />
+              </label>
+              <label className="rp-modal__field">
+                <span>ORCID</span>
+                <input
+                  value={editForm.orcid}
+                  onChange={e => setEditForm(f => ({ ...f, orcid: e.target.value }))}
+                  placeholder="0000-0002-1825-0097 or full URL"
+                  maxLength={80}
+                />
+              </label>
+              <div className="rp-modal__actions">
+                <button type="button" className="rp-modal__btn rp-modal__btn--ghost" disabled={editSaving} onClick={() => setEditOpen(false)}>
+                  Cancel
+                </button>
+                <button type="submit" className="rp-modal__btn rp-modal__btn--primary" disabled={editSaving}>
+                  {editSaving ? 'Saving…' : 'Save'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

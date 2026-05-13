@@ -5,19 +5,40 @@
  * Base URL: http://localhost:8000 (FastAPI backend)
  */
 
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000'
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
+function formatApiError(detail) {
+  if (detail == null) return 'Request failed'
+  if (typeof detail === 'string') return detail
+  if (Array.isArray(detail)) {
+    return detail.map(e => (typeof e === 'object' && e?.msg ? e.msg : String(e))).join('; ')
+  }
+  return String(detail)
+}
 
 // ── Generic fetch helper ────────────────────────────────────────
 async function apiFetch(path, options = {}) {
+  const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) }
   const res = await fetch(`${BASE_URL}${path}`, {
-    headers: { 'Content-Type': 'application/json' },
     ...options,
+    headers,
   })
+  const text = await res.text()
   if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: res.statusText }))
-    throw new Error(err.detail || `HTTP ${res.status}`)
+    let err
+    try {
+      err = text ? JSON.parse(text) : { detail: res.statusText }
+    } catch {
+      err = { detail: text || res.statusText }
+    }
+    throw new Error(formatApiError(err.detail) || `HTTP ${res.status}`)
   }
-  return res.json()
+  if (!text) return null
+  try {
+    return JSON.parse(text)
+  } catch {
+    return null
+  }
 }
 
 // ── Normalizers: convert backend snake_case → frontend shape ────
@@ -45,6 +66,8 @@ export function normalizeResearcher(r) {
     papers:      r.paper_count ?? r.papers ?? 0,
     bio:         r.bio || '',
     specialty:   r.specialty || '',
+    website:     r.website || '',
+    orcid:       r.orcid || '',
     isClaimed:   r.is_claimed ?? false,
     score:       r.score        // may be undefined for DB results
       ? Math.round(r.score * 100)
@@ -199,6 +222,17 @@ export async function getNetworkData(threshold = 0.6) {
   return data.data
 }
 
+/**
+ * Cosine similarity score between two catalog researchers (embedding space).
+ */
+export async function getSimilarityPair(idA, idB) {
+  const qs = new URLSearchParams()
+  qs.set('a', idA)
+  qs.set('b', idB)
+  const data = await apiFetch(`/ai/similarity-pair?${qs}`)
+  return data.data
+}
+
 // ── Stats ───────────────────────────────────────────────────────
 
 /**
@@ -206,4 +240,99 @@ export async function getNetworkData(threshold = 0.6) {
  */
 export async function getStats() {
   return apiFetch('/stats').then(d => d.data)
+}
+
+// ── Auth ────────────────────────────────────────────────────────
+
+export function normalizeAuthResponse(d) {
+  return {
+    accessToken: d.access_token,
+    userId: d.user_id,
+    email: d.email,
+    fullName: d.full_name || '',
+    profileListingPending: Boolean(d.profile_listing_pending),
+    linkedResearcherId: d.linked_researcher_id || null,
+    profileClaimed: Boolean(d.profile_claimed),
+  }
+}
+
+export async function authLogin(body) {
+  return apiFetch('/auth/login', {
+    method: 'POST',
+    body: JSON.stringify({ email: body.email, password: body.password }),
+  })
+}
+
+export async function authRegister(body) {
+  return apiFetch('/auth/register', {
+    method: 'POST',
+    body: JSON.stringify(body),
+  })
+}
+
+export async function getAuthMe(token) {
+  return apiFetch('/auth/me', {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+}
+
+function authHeaders(token) {
+  return token ? { Authorization: `Bearer ${token}` } : {}
+}
+
+export async function patchProfile(researcherId, token, body) {
+  return apiFetch(`/profiles/by-id/${encodeURIComponent(researcherId)}`, {
+    method: 'PATCH',
+    body: JSON.stringify(body),
+    headers: authHeaders(token),
+  })
+}
+
+export async function getCollaborationEgo(researcherId, limitNeighbors = 40) {
+  const q = new URLSearchParams({ limit_neighbors: String(limitNeighbors) })
+  return apiFetch(
+    `/collaboration/ego/${encodeURIComponent(researcherId)}?${q}`
+  )
+}
+
+export async function listSavedSearches(token) {
+  return apiFetch('/saved-searches', { headers: authHeaders(token) })
+}
+
+export async function createSavedSearch(token, body) {
+  return apiFetch('/saved-searches', {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: authHeaders(token),
+  })
+}
+
+export async function deleteSavedSearch(token, id) {
+  return apiFetch(`/saved-searches/${id}`, {
+    method: 'DELETE',
+    headers: authHeaders(token),
+  })
+}
+
+export async function getDigestSubscription(token) {
+  return apiFetch('/digests/subscription', { headers: authHeaders(token) })
+}
+
+export async function putDigestSubscription(token, body) {
+  return apiFetch('/digests/subscription', {
+    method: 'PUT',
+    body: JSON.stringify(body),
+    headers: authHeaders(token),
+  })
+}
+
+export async function getDigestPreview(token) {
+  return apiFetch('/digests/preview', { headers: authHeaders(token) })
+}
+
+export async function postDigestSendTest(token) {
+  return apiFetch('/digests/send-test', {
+    method: 'POST',
+    headers: authHeaders(token),
+  })
 }

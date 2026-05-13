@@ -34,6 +34,10 @@ def seed_database(db: Session) -> None:
                 topics=str(row.get("topics", "")),
                 bio="",
                 specialty=str(row.get("topics", "")).split("|")[0].strip()[:300],
+                website="",
+                orcid="",
+                is_claimed=False,
+                claimed_by_user_id=None,
                 created_at=datetime.utcnow(),
                 updated_at=datetime.utcnow(),
             )

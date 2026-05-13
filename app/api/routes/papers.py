@@ -38,7 +38,7 @@ def get_paper(paper_id: str, db: Session = Depends(get_db)):
     return paper
 
 
-@router.get("/researchers/{researcher_id}/papers", response_model=List[PaperResponse])
+@router.get("/researchers/{researcher_id:path}/papers", response_model=List[PaperResponse])
 def get_researcher_papers(
     researcher_id: str,
     limit: int = Query(default=50, ge=1, le=500),

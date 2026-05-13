@@ -13,15 +13,26 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-try:
-    from sentence_transformers import SentenceTransformer
-    from sklearn.metrics.pairwise import cosine_similarity
-except ImportError as e:
-    print(f"Installing missing packages: {e}")
-    import subprocess
-    subprocess.check_call(['pip', 'install', 'sentence-transformers', 'scikit-learn'])
-    from sentence_transformers import SentenceTransformer
-    from sklearn.metrics.pairwise import cosine_similarity
+# Lazy imports to avoid blocking startup
+SentenceTransformer = None
+cosine_similarity = None
+
+def _ensure_imports():
+    global SentenceTransformer, cosine_similarity
+    if SentenceTransformer is None:
+        try:
+            from sentence_transformers import SentenceTransformer as ST
+            from sklearn.metrics.pairwise import cosine_similarity as cs
+            SentenceTransformer = ST
+            cosine_similarity = cs
+        except ImportError as e:
+            print(f"Installing missing packages: {e}")
+            import subprocess
+            subprocess.check_call(['pip', 'install', 'sentence-transformers', 'scikit-learn'])
+            from sentence_transformers import SentenceTransformer as ST
+            from sklearn.metrics.pairwise import cosine_similarity as cs
+            SentenceTransformer = ST
+            cosine_similarity = cs
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -49,6 +60,7 @@ _cache = {
 def _load_all():
     """Load all data with caching"""
     global _cache
+    _ensure_imports()
     
     if _cache["researchers"] is None:
         logger.info(" Loading data (first time only)...")
@@ -57,13 +69,21 @@ def _load_all():
         researchers_file = RESEARCHERS_FILE if os.path.exists(RESEARCHERS_FILE) else RESEARCHERS_FILE_ALT
         
         try:
-            _cache["researchers"] = pd.read_csv(researchers_file)
+            df = pd.read_csv(researchers_file)
+            # Force all IDs to str to prevent int/str mismatch in joins
+            df["id"] = df["id"].astype(str).str.strip()
+            _cache["researchers"] = df
+
             _cache["embeddings"] = np.load(get_data_path("embeddings.npy"))
             _cache["similarity_matrix"] = np.load(get_data_path("similarity_matrix.npy"))
-            _cache["index"] = pd.read_csv(get_data_path("embedding_index.csv"))
+
+            idx = pd.read_csv(get_data_path("embedding_index.csv"))
+            idx["id"] = idx["id"].astype(str).str.strip()
+            _cache["index"] = idx
+
             _cache["model"] = SentenceTransformer("all-MiniLM-L6-v2")
             
-            logger.info(f"✓ Loaded from {researchers_file}")
+            logger.info(f"✓ Loaded {len(df)} researchers, {len(idx)} embeddings from {researchers_file}")
         except FileNotFoundError as e:
             logger.error(f"Error loading data: {e}")
             raise
@@ -77,6 +97,16 @@ def _load_all():
     
     return (_cache["researchers"], _cache["embeddings"], 
             _cache["similarity_matrix"], _cache["index"], _cache["model"])
+
+
+def warm_cache():
+    """Pre-load all AI data and model at startup. Call from app startup event."""
+    try:
+        logger.info("Warming AI cache (loading model + embeddings)...")
+        _load_all()
+        logger.info("✓ AI cache ready")
+    except Exception as e:
+        logger.warning(f"AI cache warm-up failed (search will still work on demand): {e}")
 
 def recommend_collaborators(researcher_id, top_n=10, min_score=0.3):
     """
@@ -150,6 +180,66 @@ def recommend_collaborators(researcher_id, top_n=10, min_score=0.3):
         "researcher": rec_name,
         "count": len(recommendations),
         "results": recommendations
+    }
+
+
+def similarity_between_ids(researcher_id_a: str, researcher_id_b: str):
+    """
+    Cosine similarity between two researchers in the precomputed embedding space.
+    Both IDs must appear in embedding_index (same order as similarity_matrix rows).
+    """
+    researchers, embeddings, similarity_matrix, index, model = _load_all()
+    id_a = str(researcher_id_a).strip()
+    id_b = str(researcher_id_b).strip()
+
+    ma = index[index["id"] == id_a]
+    mb = index[index["id"] == id_b]
+
+    if ma.empty:
+        return {
+            "ok": False,
+            "error": "a_not_found",
+            "message": "Researcher A is not in the AI similarity catalog (embedding index).",
+        }
+    if mb.empty:
+        return {
+            "ok": False,
+            "error": "b_not_found",
+            "message": "Researcher B is not in the AI similarity catalog (embedding index).",
+        }
+
+    ia = int(ma.index[0])
+    ib = int(mb.index[0])
+    if ia >= similarity_matrix.shape[0] or ib >= similarity_matrix.shape[0]:
+        return {
+            "ok": False,
+            "error": "dimension",
+            "message": "Similarity matrix does not align with the embedding index.",
+        }
+
+    score = float(similarity_matrix[ia][ib])
+    name_a = str(ma.iloc[0]["name"])
+    name_b = str(mb.iloc[0]["name"])
+
+    if id_a == id_b:
+        return {
+            "ok": True,
+            "score": 1.0,
+            "same_profile": True,
+            "name_a": name_a,
+            "name_b": name_b,
+            "id_a": id_a,
+            "id_b": id_b,
+        }
+
+    return {
+        "ok": True,
+        "score": round(score, 4),
+        "same_profile": False,
+        "name_a": name_a,
+        "name_b": name_b,
+        "id_a": id_a,
+        "id_b": id_b,
     }
 
 def query_researchers(query_text, top_n=10, location_filter=None):

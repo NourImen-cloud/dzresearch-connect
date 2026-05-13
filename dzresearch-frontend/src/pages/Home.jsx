@@ -5,6 +5,7 @@ import pic from '../images/AlgeriaNetwork.png';
 import SearchBar from '../components/Searchbar';
 import { Link } from 'react-router-dom';
 import { getStats } from '../services/api'
+import { useAuth } from '../context/AuthContext'
 
 /* ─── How It Works steps ──────────────────────────────────── */
 const STEPS = [
@@ -41,9 +42,9 @@ const STEPS = [
   {
     step: 'Step 4',
     icon: <NetworkStepIcon />,
-    title: 'Connect and collaborate',
-    desc:  'Build your research network by connecting with researchers who share your interests. Form collaborations and strengthen Algeria\'s research ecosystem.',
-    features: ['Find Collaborators — Connect with researchers in complementary fields', 'Build Networks — Expand your academic and research connections', 'Strengthen Research — Contribute to Algeria\'s research ecosystem'],
+    title: 'Co-authors, similarity map & email digest',
+    desc:  'On each profile, open the Co-authors tab to see who published together in our data. Use the Similarity map in the menu for AI “look-alikes”. Log in and open Email digest to get a weekly catalog email matching your interests.',
+    features: ['Co-authors tab — Shared-paper network on every researcher profile', 'Similarity map — AI-based related researchers (menu link)', 'Email digest — Weekly list from our catalog when you are logged in'],
     accent: 'navy',
     image: <NetworkIllustration />,
     flip: true,
@@ -53,6 +54,8 @@ const STEPS = [
 /* ═══════════════════════════════════════════════════════════ */
 export default function Home() {
   const navigate = useNavigate()
+  const { isAuthenticated, profileListingPending, refreshSession } = useAuth()
+  const [dismissPendingBanner, setDismissPendingBanner] = useState(false)
   const [stats, setStats] = useState({
     total_researchers: '477+',
     total_papers:      '21k+',
@@ -67,6 +70,12 @@ export default function Home() {
       })
       .catch(() => {/* keep defaults */})
   }, [])
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      refreshSession()
+    }
+  }, [isAuthenticated, refreshSession])
 
   const STATS = [
     { icon: <PeopleIcon />, value: stats.total_researchers?.toLocaleString?.() ?? stats.total_researchers, label: 'Researchers' },
@@ -86,6 +95,22 @@ export default function Home() {
 
   return (
     <div className="home">
+      {isAuthenticated && profileListingPending && !dismissPendingBanner && (
+        <div className="home-pending-banner" role="status">
+          <p className="home-pending-banner__text">
+            <strong>Your listing request is in progress.</strong>{' '}
+            We could not match your OpenAlex profile to a researcher in our catalog yet. You can use
+            your account normally; we will review and add your profile when possible.
+          </p>
+          <button
+            type="button"
+            className="home-pending-banner__dismiss"
+            onClick={() => setDismissPendingBanner(true)}
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
       <section className="hero">
         <div className="hero__bg-dots" />
         <div className="hero__content">
@@ -115,6 +140,58 @@ export default function Home() {
               <span className="stat__label">{s.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="home-discover" aria-labelledby="home-discover-title">
+        <div className="home-discover__inner">
+          <h2 id="home-discover-title" className="home-discover__title">
+            Co-authors vs similarity map vs email digest
+          </h2>
+          <p className="home-discover__lead">
+            These three tools are different — use this guide so visitors and researchers know where to look.
+          </p>
+          <div className="home-discover__grid">
+            <article className="home-discover__card">
+              <span className="home-discover__pill">On each profile</span>
+              <h3 className="home-discover__card-title">Co-author map</h3>
+              <p className="home-discover__card-text">
+                Search for a researcher, open their profile, then open the <strong>Co-authors</strong> tab. Lines
+                connect people who share <strong>at least one paper</strong> in our catalog.
+              </p>
+            </article>
+            <article className="home-discover__card">
+              <span className="home-discover__pill">Top menu</span>
+              <h3 className="home-discover__card-title">Similarity map (AI)</h3>
+              <p className="home-discover__card-text">
+                Shows who is <strong>semantically similar</strong> using embeddings — useful discovery, but not the
+                same as having written a paper together.
+              </p>
+              <Link to="/graph-demo" className="home-discover__link">
+                Open similarity map →
+              </Link>
+            </article>
+            <article className="home-discover__card">
+              <span className="home-discover__pill">Logged-in users</span>
+              <h3 className="home-discover__card-title">Weekly email digest</h3>
+              <p className="home-discover__card-text">
+                Save keywords and (optionally) turn on weekly emails. Each message lists a small set of{' '}
+                <strong>papers and researchers already in DZresearch</strong> that match your filters — not external news.
+              </p>
+              {isAuthenticated ? (
+                <Link to="/account/digests" className="home-discover__link">
+                  Set up email digest →
+                </Link>
+              ) : (
+                <p className="home-discover__card-foot">
+                  <Link to="/login">Log in</Link>
+                  {' or '}
+                  <Link to="/register">register</Link>
+                  {' '}— then use <strong>Email digest</strong> in the menu.
+                </p>
+              )}
+            </article>
+          </div>
         </div>
       </section>
 

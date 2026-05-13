@@ -1,11 +1,12 @@
 sentence-transformers
-faiss-cpu
 scikit-learn
 fastapi
-uvicorn
+uvicorn[standard]
 pandas
 numpy
 sqlalchemy
-python-jose
-passlib
+python-jose[cryptography]
+passlib[bcrypt]
 email-validator
+python-dotenv
+python-multipart

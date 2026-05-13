@@ -13,4 +13,5 @@ class PaperResponse(BaseModel):
     concepts: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
