@@ -3,6 +3,7 @@
 from fastapi import APIRouter
 
 from app.api.routes.ai_features import router as ai_router
+from app.api.routes.chat import router as chat_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.collaboration import router as collaboration_router
 from app.api.routes.digests import router as digests_router
@@ -21,3 +22,4 @@ api_router.include_router(collaboration_router)
 api_router.include_router(invites_router)
 api_router.include_router(papers_router)
 api_router.include_router(ai_router)
+api_router.include_router(chat_router)

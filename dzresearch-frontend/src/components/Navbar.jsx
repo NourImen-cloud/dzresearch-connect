@@ -63,6 +63,14 @@ export default function Navbar() {
               Similarity map
             </Link>
           </li>
+          <li>
+            <Link
+              to="/chatbot"
+              className={`navbar__link ${location.pathname === '/chatbot' ? 'navbar__link--active' : ''}`}
+            >
+              Assistant
+            </Link>
+          </li>
           {!isAuthenticated ? (
             <>
               <li>

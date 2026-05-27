@@ -5,7 +5,7 @@
  * Base URL: http://localhost:8000 (FastAPI backend)
  */
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001'
 
 function formatApiError(detail) {
   if (detail == null) return 'Request failed'
@@ -334,5 +334,13 @@ export async function postDigestSendTest(token) {
   return apiFetch('/digests/send-test', {
     method: 'POST',
     headers: authHeaders(token),
+  })
+}
+
+// ── Chat Assistant ─────────────────────────────────────────────
+export async function sendChatMessage(message) {
+  return apiFetch('/chat', {
+    method: 'POST',
+    body: JSON.stringify({ message }),
   })
 }
