@@ -24,6 +24,8 @@ from app.services.db_schema import (
     ensure_researcher_profile_extra_columns,
     ensure_sqlite_user_profile_columns,
 )
+from app.services.embedding_service import create_embedding, compute_similarity
+
 
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
@@ -55,7 +57,6 @@ def initialize_database():
     ensure_researcher_profile_extra_columns()
 
     db = SessionLocal()
-
     try:
         seed_database(db)
     finally:
@@ -67,12 +68,12 @@ def initialize_database():
 @app.on_event("startup")
 def startup_event():
     initialize_database()
+    create_embedding("test")
 
 
 @app.get("/")
 def root():
     initialize_database()
-
     return {
         "service": "DZ Research Connect",
         "status": "online",
@@ -83,10 +84,7 @@ def root():
 @app.get("/health")
 def health():
     initialize_database()
-
-    return {
-        "status": "healthy",
-    }
+    return {"status": "healthy"}
 
 
 @app.get("/stats")
@@ -94,19 +92,15 @@ def stats():
     initialize_database()
 
     db = SessionLocal()
-
     try:
         total_researchers = db.query(ResearcherProfile).count()
-
         claimed_profiles = (
             db.query(ResearcherProfile)
             .filter(ResearcherProfile.is_claimed == True)
             .count()
         )
-
         total_users = db.query(User).count()
         total_papers = db.query(Paper).count()
-
         pending_invites = (
             db.query(Invitation)
             .filter(Invitation.status == "pending")
@@ -128,10 +122,7 @@ def stats():
         )
 
         top_topics = (
-            db.query(
-                ResearcherProfile.topics,
-                func.count(ResearcherProfile.id),
-            )
+            db.query(ResearcherProfile.topics, func.count(ResearcherProfile.id))
             .group_by(ResearcherProfile.topics)
             .order_by(func.count(ResearcherProfile.id).desc())
             .limit(5)
@@ -154,10 +145,7 @@ def stats():
                     else 0
                 ),
                 "top_topics": [
-                    {
-                        "topic": topic,
-                        "count": count,
-                    }
+                    {"topic": topic, "count": count}
                     for topic, count in top_topics
                 ],
             },
@@ -229,20 +217,15 @@ Examples:
 }}
 """
 
-    completion = groq_client.chat.completions.create(
-        model="llama-3.1-8b-instant",
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-    )
-
-    content = completion.choices[0].message.content.strip()
-
     try:
+        completion = groq_client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[{"role": "user", "content": prompt}],
+        )
+
+        content = completion.choices[0].message.content.strip()
         parsed = json.loads(content)
+
     except Exception:
         parsed = {
             "intent": "both",
@@ -266,6 +249,12 @@ def chat(request: ChatRequest):
         query = parsed.get("topic", request.message)
         limit = parsed.get("limit", 5)
 
+        try:
+            limit = int(limit)
+        except Exception:
+            limit = 5
+
+        limit = max(1, min(limit, 10))
         query = query.lower().strip()
 
         topic_aliases = {
@@ -274,7 +263,8 @@ def chat(request: ChatRequest):
             "ai": "artificial intelligence",
             "ml": "machine learning",
             "cv": "computer vision",
-            "computer vision cv": "computer vision",}
+            "computer vision cv": "computer vision",
+        }
 
         query = topic_aliases.get(query, query)
 
@@ -282,22 +272,25 @@ def chat(request: ChatRequest):
         papers = []
 
         if intent in ["researchers", "both"]:
-            researcher_rows = (
-                db.query(ResearcherProfile)
-                .filter(
-                    or_(
-                        ResearcherProfile.name.ilike(f"%{query}%"),
-                        ResearcherProfile.institution.ilike(f"%{query}%"),
-                        ResearcherProfile.location.ilike(f"%{query}%"),
-                        ResearcherProfile.country.ilike(f"%{query}%"),
-                        ResearcherProfile.topics.ilike(f"%{query}%"),
-                        ResearcherProfile.specialty.ilike(f"%{query}%"),
-                        ResearcherProfile.bio.ilike(f"%{query}%"),
-                    )
-                )
-                .limit(limit)
-                .all()
-            )
+            all_researchers = db.query(ResearcherProfile).all()
+            query_embedding = create_embedding(query)
+            scored_researchers = []
+
+            for r in all_researchers:
+                text = f"""
+                {r.name or ""}
+                {r.topics or ""}
+                {r.specialty or ""}
+                {r.bio or ""}
+                {r.institution or ""}
+                """
+
+                researcher_embedding = create_embedding(text)
+                score = compute_similarity(query_embedding, researcher_embedding)
+                scored_researchers.append((score, r))
+
+            scored_researchers.sort(reverse=True, key=lambda x: x[0])
+            top_researchers = [r for score, r in scored_researchers[:limit]]
 
             researchers = [
                 ChatResearcher(
@@ -309,7 +302,7 @@ def chat(request: ChatRequest):
                     paper_count=r.paper_count or 0,
                     is_claimed=bool(r.is_claimed),
                 )
-                for r in researcher_rows
+                for r in top_researchers
             ]
 
         if intent in ["papers", "both"]:
@@ -336,65 +329,10 @@ def chat(request: ChatRequest):
                 for p in paper_rows
             ]
 
-        context = f"""
-User question:
-{request.message}
-
-Detected intent:
-{intent}
-
-Detected topic:
-{query}
-
-Researchers:
-{[r.dict() for r in researchers]}
-
-Papers:
-{[p.dict() for p in papers]}
-"""
-
-        try:
-            completion = groq_client.chat.completions.create(
-                model="llama-3.1-8b-instant",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": (
-    "You are the AI assistant of DZ Research Connect. "
-    "You MUST ONLY answer using the researchers and papers provided in the context. "
-    "Do NOT invent papers, researchers, or external knowledge. "
-    "If no matching results are found, clearly say no results were found in the platform database."
-)
-                    },
-                    {
-                        "role": "user",
-                        "content": context,
-                    },
-                ],
-            )
-
-            answer = completion.choices[0].message.content
-
-        except Exception:
-            if researchers and papers:
-                answer = (
-                    f"I found {len(researchers)} researchers and "
-                    f"{len(papers)} papers related to '{query}'."
-                )
-            elif researchers:
-                answer = (
-                    f"I found {len(researchers)} researchers "
-                    f"related to '{query}'."
-                )
-            elif papers:
-                answer = (
-                    f"I found {len(papers)} papers "
-                    f"related to '{query}'."
-                )
-            else:
-                answer = (
-                    f"I could not find direct results for '{query}'."
-                )
+        if researchers or papers:
+            answer = ""
+        else:
+            answer = "No matching results were found in the platform database."
 
         return ChatResponse(
             answer=answer,
