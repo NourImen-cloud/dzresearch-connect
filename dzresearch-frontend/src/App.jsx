@@ -11,6 +11,7 @@ import PaperProfile from './pages/PaperProfile'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import DigestAccount from './pages/DigestAccount'
+import Chatbot from './pages/Chatbot'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/account/digests" element={<DigestAccount />} />
+          <Route path="/chatbot" element={<Chatbot />} />
         </Routes>
         <Footer />
       </BrowserRouter>
